@@ -1,0 +1,60 @@
+
+  {{#if es}}
+            
+            {{#if isCC}}
+            {{clientName}} ha programado una reunión con {{providerName}} has sido puesto en copia
+            {{else}}
+            Has programado una reunión con {{providerName}}
+            {{/if}}
+             
+        
+        {{else if de}}
+        {{!-- German --}}
+            
+            {{#if isCC}}
+            	{{clientName}} hat ein Treffen gebucht mit {{providerName}} Sie wurden als CC hinzugefügt
+            	{{else}}
+            	Sie haben ein Treffen gebucht mit {{providerName}}
+          	{{/if}}
+             
+        
+        {{else if ro}}
+            
+            {{#if isCC}}
+            {{clientName}} a rezervat o întâlnire cu {{providerName}} ai fost adăugat ca CC
+            {{else}}
+            Ai rezervat o întâlnire cu {{providerName}}
+            {{/if}}
+             
+
+        {{else if po}}
+
+            
+            {{#if isCC}}
+            {{clientName}} reservou uma reunião com {{providerName}} você foi adicionado como CC
+
+            {{else}}
+            Você reservou uma reunião com {{providerName}}
+            {{/if}}
+             
+
+        {{else if it}}
+            
+            {{#if isCC}}
+            {{clientName}} ha prenotato un appuntamento con {{providerName}} sei stato aggiunto come CC
+            {{else}}
+            Ha prenotato un incontro con {{providerName}}
+            {{/if}}
+             
+
+        {{else}}
+
+            
+            {{#if isCC}}
+            {{clientName}} has booked a meeting with {{providerName}} you were added as CC
+            {{else}}
+            You have booked a meeting with {{providerName}}
+            {{/if}}
+
+             
+    {{/if}}

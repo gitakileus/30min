@@ -1,0 +1,7 @@
+{
+  "locales": ["en", "es", "it", "pt", "ro", "de"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common", "page", "profile", "event", "meeting", "setting"]
+  }
+}

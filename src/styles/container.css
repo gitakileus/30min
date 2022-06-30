@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .containerGrid {
+    @apply grid grid-cols-8 gap-4 w-full;
+  }
+
+  .containerCenter {
+    @apply w-full max-w-7xl flex flex-col m-auto px-4 py-8;
+  }
+
+  .containerGridChild {
+    @apply col-span-8 md:col-span-4;
+  }
+}

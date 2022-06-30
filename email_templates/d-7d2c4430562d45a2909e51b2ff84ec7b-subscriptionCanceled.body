@@ -1,0 +1,18 @@
+
+  <html>
+    <head>
+      <title>Extension Subscription Canceled</title>
+    </head>
+    <body>
+      <div>
+        <p>Hello {{customerName}},</p>
+        <p>This is a confirmation email for your recent Subscription Cancelation. We're sorry to see you go.<br/> 
+            If you were displeased by the service, please reach out to our support team hello@30mins.com</p>
+    
+        <p>
+            Best Regards,<br/>
+            30mins
+        </p>
+      </div>
+    </body>
+  </html>

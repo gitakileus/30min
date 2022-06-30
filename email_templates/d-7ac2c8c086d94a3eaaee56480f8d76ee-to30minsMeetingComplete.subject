@@ -1,0 +1,19 @@
+   {{#if ro}}
+      {{! romanian }}
+           {{paymentType}} Întâlnire completă     
+    {{else if de}}
+      {{! German }}
+           {{paymentType}} - Sitzung abgeschlossen     
+    {{else if po}}
+      {{! portuguese }}
+           {{paymentType}} - Reunião Concluída     
+    {{else if es}}
+      {{! esponal }}
+           {{paymentType}} - Reunión Completada     
+    {{else if it}}
+      {{! italian }}
+           {{paymentType}} - Riunione completata     
+    {{else}}
+      {{! english }}
+           {{paymentType}} - Meeting Complete     
+    {{/if}}

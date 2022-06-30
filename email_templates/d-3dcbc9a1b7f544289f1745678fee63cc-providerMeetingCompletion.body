@@ -1,0 +1,196 @@
+<html>
+  <head>
+<title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <div>
+        <p>Salut {{clientName}},</p>
+        <p>{{providerName}} a marcat întâlnirea ca finalizată.</p>
+        <p>Au fost atașate următoarele Notițe Post-Întâlnire:</p>
+        <p>{{postMeetingNotes}}</p>
+        <br />
+        {{#if isEscrow}}
+          <p>Te rugăm să acorzi câteva momente pentru a
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >Confirma</a>
+            sau a
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >disputa</a>
+            întâlnirea.</p>
+          <p>Toate cele bune, <br /> Echipa 30mins </p>
+        {{else}}
+          <p>Te rugăm să acorzi câteva momente pentru a răspunde
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >Satisfăcut</a>
+            or
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >Nesatisfăcut</a></p>
+          <p>Toate cele bune, <br /> {{providerName}}</p>
+        {{/if}}
+      </div>
+    {{else if de}}
+      {{! German }}
+
+      <div>
+        <p>Hallo {{clientName}},</p>
+        <p>{{ProviderName}} hat die Besprechung als abgeschlossen markiert.</p>
+        <p>Die folgenden Post Meeting Notes sind beigefügt:</p>
+        <p>{{postMeetingNotes}}</p>
+        <br />
+        {{#if isEscrow}}
+          <p>Bitte nehmen Sie sich einen Moment Zeit, um
+            <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">das
+              Treffen zu bestätigen</a>
+            oder
+            <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">zu
+              bestreiten</a>.</p>
+          <p>Mit freundlichen Grüßen, <br /> 30mins Team</p>
+        {{else}}
+          <p>Bitte nehmen Sie sich einen Moment Zeit und klicken Sie auf
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >Zufrieden</a>
+            oder
+            <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">Nicht
+              zufrieden</a></p>
+          <p>Mit freundlichen Grüßen, <br /> {{Anbietername}}</p>
+        {{/if}}
+      </div>
+
+    {{else if po}}
+      {{! portuguese }}
+
+      <div>
+        <p>Olá {{clientName}},</p>
+        <p>{{providerName}} marcou a reunião como concluída.</p>
+        <p>As seguintes notas pós-reunião foram anexadas:</p>
+        <p>{{postMeetingNotes}}</p>
+        <br />
+        {{#if isEscrow}}
+          <p>Por favor, tire um momento para
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >confirmar</a>
+            ou
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >contestar</a>
+            a reunião.</p>
+          <p>Atenciosamente, <br /> Equipe 30mins </p>
+        {{else}}
+          <p>Por favor, tire um momento para avaliar
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >satisfeito</a>
+            or
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >insatisfeito</a></p>
+          <p>Atenciosamente, <br /> {{providerName}}</p>
+        {{/if}}
+      </div>
+    {{else if es}}
+      {{! esponal }}
+
+      <div>
+        <p>Hola {{clientName}},</p>
+        <p>{{providerName}} ha marcado la reunión como completada.</p>
+        <p> Se han adjuntado las siguientes notas posteriores a la reunión:</p>
+        <p>{{postMeetingNotes}}</p>
+        <br />
+        {{#if isEscrow}}
+          <p>Por favor, tómate un momento para
+            <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">
+              confirmar
+            </a>
+            o
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >disputar</a>
+            la reunión.</p>
+          <p>Saludos cordiales, <br /> El equipo 30mins </p>
+        {{else}}
+          <p>Por favor, tómate un momento para hacer clic en
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >satisfecho </a>
+            o
+            <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">no
+              satisfecho</a></p>
+          <p>Saludos cordiales, <br /> {{providerName}}</p>
+        {{/if}}
+      </div>
+    {{else if it}}
+      {{! italian }}
+
+      <div>
+        <p>Salve {{clientName}},</p>
+        <p>{{providerName}} ha contrassegnato la riunione come completa.</p>
+        <p>Sono state allegate le seguenti note post riunione:</p>
+        <p>{{postMeetingNotes}}</p>
+        <br />
+        {{#if isEscrow}}
+          <p>Per favore, prenditi un momento per
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >confermare</a>
+            o
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >contestare</a>
+            la riunione.</p>
+          <p>Cordiali saluti, <br /> il Team 30mins</p>
+        {{else}}
+          <p>Per favore, prenditi un momento per dirci se sei
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >soddisfatto</a>
+            o
+            <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">non
+              soddisfatto</a></p>
+          <p>Cordiali saluti, <br /> {{providerName}}</p>
+        {{/if}}
+      </div>
+    {{else}}
+      {{! english }}
+
+      <div>
+        <p>Hello {{clientName}},</p>
+        <p>{{providerName}} has marked the meeting as completed.</p>
+        <p>The following Post Meeting Notes have been attached:</p>
+        <p>{{postMeetingNotes}}</p>
+        <br />
+        {{#if isEscrow}}
+          <p>Please take a moment to
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >confirm</a>
+            or
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >dispute</a>
+            the meeting.</p>
+          <p>Best Regards, <br /> 30mins Team</p>
+        {{else}}
+          <p>Please take a moment to click
+            <a
+              href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+            >satisfied</a>
+            or
+            <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">not
+              satisfied</a></p>
+          <p>Best Regards, <br /> {{providerName}}</p>
+        {{/if}}
+      </div>
+    {{/if}}
+
+  </body>
+</html>

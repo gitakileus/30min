@@ -1,0 +1,19 @@
+{{#if ro}}
+  {{! romanian }}
+       {{clientName}} a confirmat completarea întâlnirii     
+{{else if de}}
+  {{! German }}
+     {{Kundenname}} hat den Abschluss der Besprechung 
+{{else if po}}
+  {{! portuguese }}
+      {{clientName}} confirmou a conclusão da reunião     
+{{else if es}}
+  {{! esponal }}
+        {{clientName}} ha confirmado la finalización de la reunión     
+{{else if it}}
+  {{! italian }}
+       {{clientName}} ha confermato il completamento della riunione     
+{{else}}
+  {{! english }}
+      {{clientName}} has confirmed meeting completion     
+{{/if}}

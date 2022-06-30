@@ -1,0 +1,34 @@
+ {{#if ro}}
+      {{! romanian }}
+           {{requesterName}}
+        a cerut să se alăture la
+        {{organizationTitle}}     
+
+    {{else if de}}
+      {{! German }}
+           {{AntragstellerName}}
+        hat den Beitritt zur
+        {{OrganisationTitel}}
+        beantragt     
+    {{else if po}}
+      {{! portuguese }}
+           {{requesterName}}
+        pediu para participar
+        {{organizationTitle}}     
+
+    {{else if es}}
+      {{! esponal }}
+           {{requesterName}} desea unirse a {{organizationTitle}}     
+
+    {{else if it}}
+      {{! italian }}
+           {{requesterName}}
+        ha chiesto di unirsi a
+        {{organizationTitle}}     
+
+    {{else}}
+      {{! english }}
+           {{requesterName}}
+        has requested to join
+        {{organizationTitle}}     
+    {{/if}}

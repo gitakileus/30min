@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .cardContainerBase {
+    @apply border-l-[12px] border-solid border-blue-500 flex flex-col gap-2 w-full px-4 py-2 rounded-md shadow-md;
+  }
+
+  .cardHeaderBase {
+    @apply text-xl font-bold w-full;
+  }
+
+  .cardBodyBase {
+    @apply text-lg w-full;
+  }
+
+  .cardFooterBase {
+    @apply text-base w-full;
+  }
+}

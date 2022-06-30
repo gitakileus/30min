@@ -1,0 +1,19 @@
+  {{#if ro}}
+      {{! romanian }}
+           {{meetingType}} întâlnire finalizată cu {{providerName}}     
+    {{else if de}}
+      {{! German }}
+           {{meetingType}} meeting komplett mit {{providerName}}     
+    {{else if po}}
+      {{! portuguese }}
+           {{meetingType}} Reunião concluída com {{providerName}}     
+    {{else if es}}
+      {{! esponal }}
+           {{meetingType}} reunión completada con {{providerName}}     
+    {{else if it}}
+      {{! italian }}
+           riunione {{meetingType}} completa con {{providerName}}     
+    {{else}}
+      {{! english }}
+           {{meetingType}} meeting complete with {{providerName}}     
+    {{/if}}

@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Disallow: /user/*
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://30mins.com

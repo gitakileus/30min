@@ -1,0 +1,19 @@
+  {{#if ro}}
+    {{! romanian }}
+     Invitație pentru alăturarea la {{organizationTitle}}     
+    {{else if de}}
+    {{! German }}
+	     Einladen zum Beitritt zu {{OrganisationTitel}}     
+    {{else if po}}
+    {{! portuguese }}
+     Convite para participar {{organizationTitle}}     
+    {{else if es}}
+    {{! esponal }}
+       Invitación a unirse a {{organizationTitle}}     
+    {{else if it}}
+    {{! italian }}
+      Invita {{organizationTitle}} a unirsi     
+    {{else}}
+    {{! english }}
+     Invite to join {{organizationTitle}}     
+    {{/if}}

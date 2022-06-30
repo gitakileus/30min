@@ -1,0 +1,20 @@
+<html>
+  <head>
+      <title>{{providerName}} has declined a meeting you booked</title>
+  </head>
+  <body>
+      <div>
+        <p>Hello
+          {{clientName}},
+          {{providerName}}
+          has declined a meeting you booked.</p>
+        <br />
+        <p>Reason: {{reason}}</p>
+        <p>You can view the meeting details at:
+          https://30mins.com/user/meetingDetails/{{bookingId}}</p>
+        {{#if isPaid}}
+          <p>Payment will be refunded to your linked payment account</p>
+        {{/if}}
+      </div>
+  </body>
+</html>

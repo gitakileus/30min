@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <p>Salut {{providerName}},</p>
+      <p>Sperăm că ți-a plăcut experiența cu {{clientName}}.</p>
+      <p>
+        Asigurați-vă că vă marcați întâlnirea ca finalizată în cadrul
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">Meetings
+          Details Page</a></p>
+      <p>Toate cele bune, <br /> Echipa 30mins</p>
+    {{else if de}}
+      {{! German }}
+      <p>Hallo {{providerName}},</p>
+      <p>Wir hoffen, dass Sie Ihre Erfahrung mit
+        {{Kundenname}}
+        genossen haben.</p>
+      <p>Bitte stellen Sie sicher, dass Sie Ihre Besprechung auf Ihrer
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >Besprechungsdetailseite</a></p>
+      als abgeschlossen markieren.
+      <p>Mit freundlichen Grüßen, <br /> 30mins Team</p><p>Hallo
+        {{providerName}},</p>
+      <p>Wir hoffen, dass Sie Ihre Erfahrung mit
+        {{Kundenname}}
+        genossen haben.</p>
+      <p>Bitte stellen Sie sicher, dass Sie Ihre Besprechung auf Ihrer
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >Besprechungsdetailseite</a></p>
+      als abgeschlossen markieren.
+      <p>Mit freundlichen Grüßen, <br /> 30mins Team</p>
+    {{else if po}}
+      {{! portuguese }}
+
+      <p>Olá {{providerName}},</p>
+      <p>Esperamos que você tenha gostado de sua experiência com
+        {{clientName}}.</p>
+      <p>Certifique-se de marcar sua reunião como concluída na sua
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">Página de
+          Detalhes das Reuniões</a></p>
+      <p>Atenciosamente, <br /> Equipe 30mins </p>
+    {{else if es}}
+      {{! esponal }}
+
+      <p>Hola {{providerName}},</p>
+      <p>Esperamos que hayas disfrutado de tu experiencia con
+        {{clientName}}.</p>
+      <p>Por favor, asegúrate de marcar tu reunión como completa dentro de tu
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">Meetings
+          Details Page</a></p>
+      <p>Saludos cordiales, <br /> El equipo 30mins </p>
+    {{else if it}}
+      {{! italian }}
+
+      <p>Salve {{providerName}},</p>
+      <p>Ci auguriamo che abbia trovato piacevole la sua esperienza con
+        {{clientName}}.</p>
+      <p>Per favore, assicurati di segnare la riunione come completa all'interno
+        della tua
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">Pagina
+          dei dettagli delle riunioni</a></p>
+      <p>Cordiali saluti, <br /> il Team 30mins</p>
+    {{else}}
+      {{! english }}
+
+      <p>Hello {{providerName}},</p>
+      <p>We hope you enjoyed your experience with {{clientName}}.</p>
+      <p>Please be sure to mark your meeting as complete within your
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">Meetings
+          Details Page</a></p>
+      <p>Best Regards, <br /> 30mins Team</p>
+    {{/if}}
+
+  </body>
+</html>

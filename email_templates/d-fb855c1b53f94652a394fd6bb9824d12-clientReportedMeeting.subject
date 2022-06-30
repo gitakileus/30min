@@ -1,0 +1,23 @@
+  {{#if ro}}
+      {{! romanian }}
+           {{clientName}} a raportat întâlnirea furnizată de tine     
+    {{else if de}}
+      {{! German }}
+           {{clientName}}
+        hat über ein von Ihnen organisiertes Treffen berichtet
+           
+    {{else if po}}
+      {{! portuguese }}
+           {{clientName}} denunciou uma reunião que você forneceu     
+    {{else if es}}
+      {{! esponal }}
+           {{clientName}}
+        ha informado sobre una reunión que has proporcionado
+           
+    {{else if it}}
+      {{! italian }}
+           {{clientName}} ha segnalato una riunione organizzata da te      
+    {{else}}
+      {{! english }}
+           {{clientName}} has reported a meeting you provided     
+    {{/if}}

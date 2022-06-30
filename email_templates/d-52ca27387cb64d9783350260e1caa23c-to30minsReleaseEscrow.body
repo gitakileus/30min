@@ -1,0 +1,364 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <div>
+        <p>{{providerName}}
+          a finalizat o întâlnire, ID-ul întâlnirii:
+          {{bookingId}}</p>
+        <p>
+          Pentru a marca plata ca eliberată, accesați aici:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if clientConfirmed}}
+          <p>
+            Clientul a confirmat finalizarea acestei întâlniri
+            <br />Feedback-ul clientului:
+            {{postMeetingFeedback}}</p>
+        {{else}}
+          <p>
+            Clientul nu a confirmat întâlnirea, dar au trecut 3 zile de la
+            confirmarea organizatorului
+          </p>
+        {{/if}}
+        <br />
+        <p>
+          Suma care urmează să fie eliberată organizatorului:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Donație cu scop caritabil: {{donationAmount}}%</p>
+          <p>Numele carității: {{charityName}}</p>
+        {{/if}}
+        <p>Datele organizatorului:</p>
+        <p>Prenume: {{providerFirstName}}</p>
+        <p>Nume: {{providerLastName}}</p>
+        <p>Adresă: {{providerAddress}}</p>
+        <p>Apartament: {{providerApt}}</p>
+        <p>Țară: {{providerCountry}}</p>
+        <p>Oraș: {{providerCity}}</p>
+        <p>Codul Poștal: {{providerZipCode}}</p>
+
+        <br />
+        <p>Detaliile întâlnirii:</p>
+        <p>Numele clientului: {{clientName}}</p>
+        <p>Email-ul Clientului: {{clientEmail}}</p>
+        <p>Telefonul Clientului: {{clientPhone}}</p>
+        <p>Numele organizatorului: {{providerName}}</p>
+        <p>Email-ul organizatorului: {{providerEmail}}</p>
+        <p>Tipul întâlnirii: {{meetingType}}</p>
+        <p>Data întâlnirii: {{meetingDate}}</p>
+        <p>Ora întâlnirii: {{meetingTime}}</p>
+        <p>Durata întâlnirii: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Numărul total de întâlniri: {{meetingCount}}</p>
+        {{/if}}
+        <p>Suma totală plătită: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donațoe cu scop caritabil: {{donationAmount}}%</p>
+          <p>Numele donației: {{charityName}}</p>
+        {{/if}}
+        <p>Notițe adiționale la rezervare: {{additionalNotes}}</p>
+        <br />
+        <p>Notițe Post-Întâlnire: {{postMeetingNotes}}</p>
+      </div>
+    {{else if de}}
+      {{! German }}
+      <div>
+        <p>{{ProviderName}}
+          hat ein Meeting abgeschlossen, Meeting ID:
+          {{bookingId}}</p>
+        <p>Um die Zahlung als freigegeben zu markieren, gehen Sie hier:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if clientConfirmed}}
+          <p>Der Kunde hat den Abschluss dieses Treffens bestätigt.
+            <br />Kundenfeedback:
+            {{postMeetingFeedback}}</p>
+        {{else}}
+          <p>Der Kunde hat das Treffen nicht bestätigt, aber 3 Tage sind
+            vergangen, seit der Organisator es bestätigt hat</p>
+        {{/if}}
+        <br />
+        <p>Der an den Veranstalter abzugebende Betrag:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Spende für wohltätige Zwecke: {{donationAmount}}%</p>
+          <p>Name der Wohltätigkeitsorganisation: {{charityName}}</p>
+        {{/if}}
+        <p>Veranstalterinformationen:</p>
+        <p>Vorname: {{providerFirstName}}</p>
+        <p>Nachname: {{providerLastName}}</p>
+        <p>Anschrift: {{providerAddress}}</p>
+        <p>Wohnung, Appartement, usw: {{providerApt}}</p>
+        <p>Land: {{providerCountry}}</p>
+        <p>Stadt: {{providerCity}}</p>
+        <p>Zip-Code: {{providerZipCode}}</p>
+
+        <br />
+        <p>Details zum Treffen:</p>
+        <p>Name des Kunden: {{clientName}}</p>
+        <p>Die E-Mail des Kunden: {{clientEmail}}</p>
+        <p>Telefon des Kunden: {{clientPhone}}</p>
+        <p>Name des Veranstalters: {{providerName}}</p>
+        <p>E-Mail des Veranstalters: {{providerEmail}}</p>
+        <p>Art der Sitzung: {{meetingType}}</p>
+        <p>Termin der Sitzung: {{meetingDate}}</p>
+        <p>Zeit der Sitzung: {{meetingTime}}</p>
+        <p>Dauer der Sitzung: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Gesamtzahl der Sitzungen: {{meetingCount}}</p>
+        {{/if}}
+        <p>Gesamtbetrag gezahlt: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Spende für wohltätige Zwecke: {{donationAmount}}%</p>
+          <p>Name der Wohltätigkeitsorganisation: {{charityName}}</p>
+        {{/if}}
+        <p>Zusätzliche Hinweise zur Buchung: {{additionalNotes}}</p>
+        <br />
+        <p>Nachbemerkungen zur Sitzung: {{postMeetingNotes}}</p>
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+
+      <div>
+
+        <p>{{providerName}} concluiu a reunião, ID da Reunião: {{bookingId}}</p>
+
+        <p>Para marcar o pagamento como liberado, clique aqui:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if clientConfirmed}}
+          <p>O Cliente confirmou a conclusão desta reunião.
+            <br />Feedback do Cliente:
+            {{postMeetingFeedback}}</p>
+        {{else}}
+          <p>O cliente não confirmou a reunião, mas 3 dias se passaram desde a
+            confirmação do organizador</p>
+        {{/if}}
+        <br />
+        <p>Valor a ser liberado para organizador:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Doação para Caridade: {{donationAmount}}%</p>
+          <p>Nome da Instituição de Caridade: {{charityName}}</p>
+        {{/if}}
+        <p>Informações do Organizador:</p>
+        <p>Primeiro Nome: {{providerFirstName}}</p>
+        <p>Último Nome: {{providerLastName}}</p>
+        <p>Endereço: {{providerAddress}}</p>
+        <p>Apt, casa, etc: {{providerApt}}</p>
+        <p>País: {{providerCountry}}</p>
+        <p>Cidade: {{providerCity}}</p>
+        <p>CEP: {{providerZipCode}}</p>
+
+        <br />
+        <p>Detalhes da Reunião:</p>
+        <p>Nome do Cliente: {{clientName}}</p>
+        <p>E-mail do Cliente: {{clientEmail}}</p>
+        <p>Telefone do Cliente: {{clientPhone}}</p>
+        <p>Nome do Organizador: {{providerName}}</p>
+        <p>E-mail do Organizador: {{providerEmail}}</p>
+        <p>Tipo de Reunião: {{meetingType}}</p>
+        <p>Data da Reunião: {{meetingDate}}</p>
+        <p>Hora da Reunião: {{meetingTime}}</p>
+        <p>Duração da Reunião: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Total de Reuniões: {{meetingCount}}</p>
+        {{/if}}
+        <p>Valor Total Pago: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Doação para Caridade: {{donationAmount}}%</p>
+          <p>Nome da Instituição de Caridade: {{charityName}}</p>
+        {{/if}}
+        <p>Observações adicionais sobre a reserva: {{additionalNotes}}</p>
+        <br />
+        <p>Notas pós-reunião: {{postMeetingNotes}}</p>
+      </div>
+    {{else if es}}
+      {{! esponal }}
+
+      <div>
+        <p>{{providerName}}
+          ha terminado una reunión, ID de la reunión:
+          {{bookingId}}</p>
+        <p>Para marcar el pago como liberado, ve aquí:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if clientConfirmed}}
+          <p>El cliente ha confirmado la finalización de esta reunión
+            <br />Comentario del cliente:
+            {{postMeetingFeedback}}</p>
+        {{else}}
+          <p>El cliente no ha confirmado la reunión, pero han pasado 3 días
+            desde que el organizador la confirmó</p>
+        {{/if}}
+        <br />
+        <p>Cantidad a entregar al organizador:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Donación de caridad: {{donationAmount}}%</p>
+          <p>Nombre de la organización benéfica: {{charityName}}</p>
+        {{/if}}
+        <p>Datos del organizador:</p>
+        <p>Nombre: {{providerFirstName}}</p>
+        <p>Apellido: {{providerLastName}}</p>
+        <p>Dirección: {{providerAddress}}</p>
+        <p>Apartamento, suite, etc: {{providerApt}}</p>
+        <p>País: {{providerCountry}}</p>
+        <p>Ciudad: {{providerCity}}</p>
+        <p>Código postal: {{providerZipCode}}</p>
+
+        <br />
+        <p>Detalles de la reunión:</p>
+        <p>Nombre del cliente: {{clientName}}</p>
+        <p>Correo electrónico del cliente: {{clientEmail}}</p>
+        <p>Teléfono del cliente: {{clientPhone}}</p>
+        <p>Nombre del organizador: {{providerName}}</p>
+        <p>Correo electrónico del organizador: {{providerEmail}}</p>
+        <p>Tipo de reunión: {{meetingType}}</p>
+        <p>Fecha de la reunión: {{meetingDate}}</p>
+        <p>Hora de la reunión: {{meetingTime}}</p>
+        <p>Duración de la reunión: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Reuniones totales: {{meetingCount}}</p>
+        {{/if}}
+        <p>Importe total pagado: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donación de caridad: {{donationAmount}}%</p>
+          <p>Nombre de la organización benéfica: {{charityName}}</p>
+        {{/if}}
+        <p>Notas adicionales sobre la reserva: {{additionalNotes}}</p>
+        <br />
+        <p>Notas sobre la reunión: {{postMeetingNotes}}</p>
+      </div>
+    {{else if it}}
+      {{! italian }}
+
+      <div>
+
+        <p>{{providerName}}
+          ha completato una riunione, ID riunione:
+          {{bookingId}}</p>
+        <p>Per contrassegnare il pagamento come autorizzato, vai qui:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if clientConfirmed}}
+          <p>Il cliente ha confermato il completamento della riunione
+            <br />Feedback del cliente:
+            {{postMeetingFeedback}}</p>
+        {{else}}
+          <p>Il cliente non ha confermato l'incontro, ma sono passati 3 giorni
+            dalla conferma dell'organizzatore.</p>
+        {{/if}}
+        <br />
+        <p>Importo da versare all'organizzatore:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Donazione di beneficenza: {{donationAmount}}%</p>
+          <p>Ente di beneficenza: {{charityName}}</p>
+        {{/if}}
+        <p>Informazioni organizzatore:</p>
+        <p>Nome: {{providerFirstName}}</p>
+        <p>Cognome: {{providerLastName}}</p>
+        <p>Indirizzo: {{providerAddress}}</p>
+        <p>Appart, stanza, etc: {{providerApt}}</p>
+        <p>Paese: {{providerCountry}}</p>
+        <p>Città: {{providerCity}}</p>
+        <p>CAP: {{providerZipCode}}</p>
+
+        <br />
+        <p>Dettagli della riunione:</p>
+        <p>Nome del cliente: {{clientName}}</p>
+        <p>Email del cliente: {{clientEmail}}</p>
+        <p>Telefono del cliente: {{clientPhone}}</p>
+        <p>Nome dell’organizzatore: {{providerName}}</p>
+        <p>Email dell’organizzatore: {{providerEmail}}</p>
+        <p>Tipo della riunione: {{meetingType}}</p>
+        <p>Data della riunione: {{meetingDate}}</p>
+        <p>Ora della riunione: {{meetingTime}}</p>
+        <p>Durata della riunione: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Numero totale di riunioni: {{meetingCount}}</p>
+        {{/if}}
+        <p>Importo totale pagato: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donazione di beneficenza: {{donationAmount}}%</p>
+          <p>Ente di beneficenza: {{charityName}}</p>
+        {{/if}}
+        <p>Note aggiuntive sulla prenotazione: {{additionalNotes}}</p>
+        <br />
+        <p>Note post riunione: {{postMeetingNotes}}</p>
+      </div>
+    {{else}}
+      {{! english }}
+
+      <div>
+        <p>{{providerName}}
+          has completed a meeting, Meeting ID:
+          {{bookingId}}</p>
+        <p>To mark the payment as released, go here:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if clientConfirmed}}
+          <p>Client has confirmed this meeting completion
+            <br />Client Feedback:
+            {{postMeetingFeedback}}</p>
+        {{else}}
+          <p>Client did not confirm meeting, but 3-days have past since
+            Organizer Confirmed</p>
+        {{/if}}
+        <br />
+        <p>Amount to be Released to Organizer:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Charity Donation: {{donationAmount}}%</p>
+          <p>Charity Name: {{charityName}}</p>
+        {{/if}}
+        <p>Organizer Information:</p>
+        <p>First Name: {{providerFirstName}}</p>
+        <p>Last Name: {{providerLastName}}</p>
+        <p>Address: {{providerAddress}}</p>
+        <p>Apt, suite, etc: {{providerApt}}</p>
+        <p>Country: {{providerCountry}}</p>
+        <p>City: {{providerCity}}</p>
+        <p>Zip Code: {{providerZipCode}}</p>
+
+        <br />
+        <p>Meeting Details:</p>
+        <p>Client's Name: {{clientName}}</p>
+        <p>Client's Email: {{clientEmail}}</p>
+        <p>Client's Phone: {{clientPhone}}</p>
+        <p>Organizer's Name: {{providerName}}</p>
+        <p>Organizer's Email: {{providerEmail}}</p>
+        <p>Meeting Type: {{meetingType}}</p>
+        <p>Meeting Date: {{meetingDate}}</p>
+        <p>Meeting Time: {{meetingTime}}</p>
+        <p>Meeting Duration: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Total Meeting Count: {{meetingCount}}</p>
+        {{/if}}
+        <p>Total Amount Paid: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Charity Donation: {{donationAmount}}%</p>
+          <p>Charity Name: {{charityName}}</p>
+        {{/if}}
+        <p>Additional Notes on Booking: {{additionalNotes}}</p>
+        <br />
+        <p>Post Meeting Notes: {{postMeetingNotes}}</p>
+      </div>
+
+    {{/if}}
+
+  </body>
+</html>

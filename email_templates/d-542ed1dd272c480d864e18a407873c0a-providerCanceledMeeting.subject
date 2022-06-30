@@ -1,0 +1,19 @@
+ {{#if ro}}
+      {{! romanian }}
+           {{providerName}} a anulat întâlnirea cu tine     
+    {{else if de}}
+      {{! German }}
+           {{Anbietername}} hat einen Termin mit Ihnen abgesagt     
+    {{else if po}}
+      {{! portuguese }}
+           {{providerName}} cancelou uma reunião com você     
+    {{else if es}}
+      {{! esponal }}
+           {{providerName}} ha cancelado una reunión contigo     
+    {{else if it}}
+      {{! italian }}
+           {{providerName}} ha annullato una riunione con te     
+    {{else}}
+      {{! english }}
+           {{providerName}} has canceled a meeting with you     
+    {{/if}}

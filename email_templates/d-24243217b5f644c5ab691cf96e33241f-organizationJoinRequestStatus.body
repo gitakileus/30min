@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <p>Salut{{requesterName}},</p>
+      Cererea ta pentru alăturare la
+      {{organizationTitle}}
+      a fost
+      {{requestStatus}}.
+      <p>Toate cele bune, <br /> {{organizationTitle}}</p>
+    {{else if de}}
+      {{! German  }}
+      <p>Hallo{{requesterName}},</p>
+      Ihre Beitrittsanfrage für
+      {{OrganisationTitel}}
+      hat den Status
+      {{requestStatus}}
+      erhalten.
+      <p>Mit freundlichen Grüßen, <br /> {{organizationTitle}}</p>
+
+    {{else if po}}
+      {{! portuguese }}
+
+      <p>Olá{{requesterName}},</p>
+      Seu pedido de adesão
+      {{organizationTitle}}
+      foi
+      {{requestStatus}}.
+      <p>Atenciosamente, <br /> {{organizationTitle}}</p>
+    {{else if es}}
+      {{! esponal }}
+
+      <p>Hola{{requesterName}},</p>
+      Tu solicitud de ingreso en
+      {{organizationTitle}}
+      ha sido
+      {{requestStatus}}.
+      <p>Saludos cordiales, <br /> {{organizationTitle}}</p>
+
+    {{else if it}}
+      {{! italian }}
+
+      <p>Salve{{requesterName}},</p>
+      La tua richiesta di adesione per
+      {{organizationTitle}}
+      è stata
+      {{requestStatus}}.
+      <p>Cordiali saluti, <br /> {{organizationTitle}}</p>
+    {{else}}
+      {{! english }}
+
+      <p>Hello{{requesterName}},</p>
+      Your Join Request for
+      {{organizationTitle}}
+      has been
+      {{requestStatus}}.
+      <p>Best Regards, <br /> {{organizationTitle}}</p>
+    {{/if}}
+  </body>
+</html>

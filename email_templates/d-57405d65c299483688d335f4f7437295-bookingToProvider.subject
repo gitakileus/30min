@@ -1,0 +1,19 @@
+{{#if ro}}
+      {{! romanian }}
+           {{clientName}} a rezervat o întâlnire cu tine     
+    {{else if de}}
+      {{! German }}
+           {{clientName}} hat einen Termin mit Ihnen vereinbart     
+    {{else if po}}
+      {{! portuguese }}
+           {{clientName}} agendou uma reunião com você     
+    {{else if es}}
+      {{! esponal }}
+           {{clientName}} ha programado una reunión contigo     
+    {{else if it}}
+      {{! italian }}
+           {{clientName}} ha prenotato una riunione con te     
+    {{else}}
+      {{! english }}
+           {{clientName}} has booked a meeting with you     
+    {{/if}}

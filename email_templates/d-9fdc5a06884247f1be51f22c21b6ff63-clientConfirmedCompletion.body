@@ -1,0 +1,114 @@
+<html>
+  <head>
+<title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+    <div>
+        <p>Salut {{providerName}},</p>
+        {{#if clientConfirmed}}
+            <p>Clientul a confirmat această completare a întâlnirii 
+            <br>Feedback-ul Clientului: {{postMeetingFeedback}}</p>
+        {{else}}
+            <p> Clientul nu a confirmat întâlnirea, dar au trecut 3 zile de când ai confirmat </p>
+        {{/if}}
+        <p>Poți vedea detaliile întâlnirii la: https://30mins.com/user/meetingDetails/{{bookingId}}.</p>
+        {{#if isPaid}}
+            <p> Plata va fi eliberată în 24 de ore în contul dvs. de plată atașat la profil.</p>
+        {{/if}}
+      
+    </div>
+  {{else if de}}
+  {{!-- German  --}}
+    <div>
+        <p>Hallo {{providerName}},</p>
+        {{#if clientConfirmed}}
+            <p>Der Kunde hat den Abschluss dieses Treffens bestätigt.
+            <br>Kundenfeedback: {{postMeetingFeedback}}</p>
+        {{else}}
+            <p>Der Kunde hat das Treffen nicht bestätigt, aber es sind 3 Tage vergangen, seit Sie es bestätigt haben</p>
+        {{/if}}
+        <p>Sie können die Details des Treffens einsehen unter: https://30mins.com/user/meetingDetails/{{bookingId}}.</p>
+        {{#if isPaid}}
+            <p>Die Zahlung wird innerhalb von 24 Stunden auf Ihr verlinktes Zahlungskonto freigegeben.</p>
+        {{/if}}
+    </div>
+    {{else if po}}
+      {{! portuguese }}
+        
+
+        <div>
+            <p>Olá {{providerName}},</p>
+            {{#if clientConfirmed}}
+                <p>O cliente confirmou a conclusão desta reunião
+                <br>Feedback do Cliente: {{postMeetingFeedback}}</p>
+            {{else}}
+                <p>O cliente não confirmou a reunião, mas 3 dias se passaram desde que você confirmou</p>
+            {{/if}}
+            <p>Você pode ver os detalhes da reunião em: https://30mins.com/user/meetingDetails/{{bookingId}}.</p>
+            {{#if isPaid}}
+                <p>O pagamento será liberado dentro de 24 horas para a conta de pagamento vinculada.</p>
+            {{/if}}
+        
+        </div>
+    {{else if es}}
+      {{! esponal }}
+    
+   
+      <div>
+        <p>Hola {{providerName}},</p>
+        {{#if clientConfirmed}}
+            <p>El cliente ha confirmado la finalización de esta reunión
+            <br>Comentario del cliente: {{postMeetingFeedback}}</p>
+        {{else}}
+            <p>El cliente no ha confirmado la reunión, pero han pasado 3 días desde que tú la confirmaste</p>
+        {{/if}}
+        <p>Puedes ver los detalles de la reunión en: https://30mins.com/user/meetingDetails/{{bookingId}}.</p>
+        {{#if isPaid}}
+            <p>El pago se liberará en un plazo de 24 horas en tu cuenta de pago vinculada.</p>
+        {{/if}}
+      </div>
+
+
+    {{else if it}}
+      {{! italian }}
+    
+	<div>
+    	<p>Salve {{providerName}},</p>
+    	{{#if clientConfirmed}}
+        	<p>Il cliente ha confermato il completamento della riunione
+        	<br>Feedback del cliente: {{postMeetingFeedback}}</p>
+    	{{else}}
+        	<p>Il cliente non ha confermato la riunione, ma sono passati 3 giorni dalla tua conferma.</p>
+    	{{/if}}
+    	<p>I dettagli della riunione sono disponibili al seguente indirizzo https://30mins.com/user/meetingDetails/{{bookingId}}.</p>
+    	{{#if isPaid}}
+        	<p>Il pagamento verrà emesso entro 24 ore sul conto collegato..</p>
+    	{{/if}}
+    
+	</div>
+    {{else}}
+      {{! english }}
+   
+    <div>
+      <p>Hello {{providerName}},</p>
+      {{#if clientConfirmed}}
+        <p>Client has confirmed this meeting completion
+          <br />Client Feedback:
+          {{postMeetingFeedback}}</p>
+      {{else}}
+        <p>Client did not confirm meeting, but 3-days have past since you have
+          Confirmed</p>
+      {{/if}}
+      <p>You can view the meeting details at:
+        https://30mins.com/user/meetingDetails/{{bookingId}}.</p>
+      {{#if isPaid}}
+        <p>Payment will be released within 24-hours to your linked payment
+          account.</p>
+      {{/if}}
+    {{/if}}
+    </div>
+  </body>
+</html>

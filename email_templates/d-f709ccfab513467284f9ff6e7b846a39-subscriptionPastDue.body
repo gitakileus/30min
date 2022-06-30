@@ -1,0 +1,18 @@
+
+  <html>
+    <head>
+      <title>Extension Payment Past Due</title>
+    </head>
+    <body>
+      <div>
+        <p>Hello {{customerName}},</p>
+        <p>One of your subscription payments is past due.<br/>
+        If you wish to continue using this product, please <a href="https://30mins.com/user/extensions/billing">Update your Payment Methods</a> or  <a href="{{invoiceLink}}">Pay the Invoice Manually.</a></p>
+    
+        <p>
+            Best Regards,<br/>
+            30mins
+        </p>
+      </div>
+    </body>
+  </html>

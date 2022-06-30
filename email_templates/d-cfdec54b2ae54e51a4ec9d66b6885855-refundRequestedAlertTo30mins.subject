@@ -1,0 +1,19 @@
+ {{#if ro}}
+      {{! romanian }}
+           {{paymentType}} – Rambursare solicitată     
+    {{else if de}}
+      {{! German }}
+           {{paymentType}} - Rückerstattung beantragt     
+    {{else if po}}
+      {{! portuguese }}
+           {{paymentType}} - Solicitação de Reembolso     
+    {{else if es}}
+      {{! esponal }}
+           {{paymentType}} - Reembolso solicitado     
+    {{else if it}}
+      {{! italian }}
+           {{paymentType}} - Richiesta di rimborso     
+    {{else}}
+      {{! english }}
+           {{paymentType}} - Refund Requested     
+    {{/if}}

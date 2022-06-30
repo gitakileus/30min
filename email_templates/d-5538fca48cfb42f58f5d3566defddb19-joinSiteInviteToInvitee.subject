@@ -1,0 +1,27 @@
+   {{#if ro}}
+      {{! romanian }}Ai fost invitat să te alături la 30mins.com de către
+        {{inviterName}}
+
+    {{else if de}}
+      {{! German }}
+Du wurdest von
+        {{Einladungsname}}
+        eingeladen, 30mins.com beizutreten
+    {{else if po}}
+      {{! portuguese }}
+Você foi convidado para se unir a 30mins.com por
+        {{inviterName}}
+
+    {{else if es}}
+      {{! esponal }}
+  Has sido invitado a unirte a 30mins.com por {{inviterName}}
+
+    {{else if it}}
+      {{! italian }}
+Sei stato invitato a iscriverti a 30mins.com da
+        {{inviterName}}
+
+    {{else}}
+      {{! english }}
+    You have been Invited to join 30mins.com by {{inviterName}}
+    {{/if}}

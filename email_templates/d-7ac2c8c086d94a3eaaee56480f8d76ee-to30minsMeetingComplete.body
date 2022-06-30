@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+      
+      <div>
+        <p>{{providerName}} a finalizat, ID-ul întâlnirii: {{bookingId}}</p>
+        <p>Detaliile întâlnirii:</p>
+        <p>Numele clientului: {{clientName}}</p>
+        <p>Email-ul clientului: {{clientEmail}}</p>
+        <p>Telefonul clientului: {{clientPhone}}</p>
+        <p>Numele furnizorului: {{providerName}}</p>
+        <p>Email-ul furnizorului: {{providerEmail}}</p>
+        <p>Tipul întâlnirii: {{meetingType}}</p>
+        <p>Data întâlnirii: {{meetingDate}}</p>
+        <p>Ora întâlnirii: {{meetingTime}}</p>
+        <p>Durata întâlnirii: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Numărul total de întâlniri: {{meetingCount}}</p>
+        {{/if}}
+        <p>Suma totală platită: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donație cu scop caritabil: {{donationAmount}}%</p>
+          <p>Numele carității: {{charityName}}</p>
+        {{/if}}
+        <p>Notițe adiționale la rezervare: {{additionalNotes}}</p>
+        <br />
+        <p>Notițe Post-Întâlnire: {{postMeetingNotes}}</p>
+      </div>
+    {{else if de}}
+      {{! German }}
+      
+        <div>
+    	<p>{{ProviderName}} hat ein Meeting abgeschlossen, Meeting ID: {{bookingId}}</p>
+    	<p>Details zum Treffen:</p>
+    	<p>Name des Kunden: {{clientName}}</p>
+    	<p>Die E-Mail des Kunden: {{clientEmail}}</p>
+    	<p>Telefon des Kunden: {{clientPhone}}</p>
+    	<p>Name des Anbieters: {{providerName}}</p>
+    	<p>E-Mail des Anbieters: {{providerEmail}}</p>
+    	<p>Art der Sitzung: {{meetingType}}</p>
+    	<p>Termin der Sitzung: {{meetingDate}}</p>
+    	<p>Zeit der Sitzung: {{meetingTime}}</p>
+    	<p>Dauer der Sitzung: {{meetingDuration}} min</p>
+    	{{#if multipleMeetings}}
+        	<p>Gesamtzahl der Sitzungen: {{meetingCount}}</p>
+    	{{/if}}
+        	<p>Gesamtbetrag gezahlt: {{currency}}{{totalAmount}}</p>
+        	{{#if charityName}}
+            	<p>Spende für wohltätige Zwecke: {{donationAmount}}%</p>
+            	<p>Name der Wohltätigkeitsorganisation: {{charityName}}</p>
+        	{{/if}}
+    	<p>Zusätzliche Hinweise zur Buchung: {{additionalNotes}}</p>
+    	<br>
+    	<p>Anmerkungen nach der Sitzung: {{postMeetingNotes}}</p>
+	</div>
+    {{else if po}}
+      {{! portuguese }}
+     
+
+      <div>
+
+        <p>{{providerName}} concluiu a reunião, ID da Reunião: {{bookingId}}</p>
+        <p>Detalhes da Reunião:</p>
+        <p>Nome do Cliente: {{clientName}}</p>
+        <p>E-mail do Cliente: {{clientEmail}}</p>
+        <p>Telefone do Cliente: {{clientPhone}}</p>
+        <p>Nome do Organizador: {{providerName}}</p>
+        <p>E-mail do Organizador: {{providerEmail}}</p>
+        <p>Tipo de Reunião: {{meetingType}}</p>
+        <p>Data da Reunião: {{meetingDate}}</p>
+        <p>Hora da Reunião: {{meetingTime}}</p>
+        <p>Duração da Reunião: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Total de Reuniões: {{meetingCount}}</p>
+        {{/if}}
+        <p>Valor Total Pago: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Doação para Caridade: {{donationAmount}}%</p>
+          <p>Nome da Instituição de Caridade: {{charityName}}</p>
+        {{/if}}
+        <p>Observações adicionais sobre a reserva: {{additionalNotes}}</p>
+        <br />
+        <p>Notas pós-reunião: {{postMeetingNotes}}</p>
+      </div>
+    {{else if es}}
+      {{! esponal }}
+     
+
+      <div>
+        <p>{{providerName}}
+          ha completado una reunión, ID de la reunión:
+          {{bookingId}}</p>
+        <p>Detalles de la Reunión:</p>
+        <p>Nombre del Cliente: {{clientName}}</p>
+        <p>Correo electrónico del Cliente: {{clientEmail}}</p>
+        <p>Teléfono del Cliente: {{clientPhone}}</p>
+        <p>Nombre del Organizador: {{providerName}}</p>
+        <p>Correo electrónico del Organizador: {{providerEmail}}</p>
+        <p>Tipo de Reunión: {{meetingType}}</p>
+        <p>Fecha de la Reunión: {{meetingDate}}</p>
+        <p>Hora de la Reunión: {{meetingTime}}</p>
+        <p>Duración de la Reunión: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Recuento total de reuniones: {{meetingCount}}</p>
+        {{/if}}
+        <p>Cantidad total pagada: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donación benéfica: {{donationAmount}}%</p>
+          <p>Nombre de la Organización benéfica: {{charityName}}</p>
+        {{/if}}
+        <p>Notas adicionales sobre la reserva: {{additionalNotes}}</p>
+        <br />
+        <p>Notas posteriores a la reunión: {{postMeetingNotes}}</p>
+      </div>
+    {{else if it}}
+      {{! italian }}
+    <div>
+     <p>{{providerName}} ha completato una riunione, ID riunione: {{bookingId}}</p>
+    	<p>Dettagli riunione:</p>
+    	<p>Nome del cliente: {{clientName}}</p>
+    	<p>Email del cliente {{clientEmail}}</p>
+    	<p>Cellulare del cliente: {{clientPhone}}</p>
+    	<p>nome dell’organizzatore: {{providerName}}</p>
+    	<p>Email dell’organizzatore: {{providerEmail}}</p>
+    	<p>Tipo di riunione: {{meetingType}}</p>
+    	<p>Data della riunione: {{meetingDate}}</p>
+    	<p>Ora della riunione: {{meetingTime}}</p>
+    	<p>Durata della riunione: {{meetingDuration}} min</p>
+    	{{#if multipleMeetings}}
+        	<p>Numero totale di riunioni: {{meetingCount}}</p>
+    	{{/if}}
+        	<p>Importo totale pagato: {{currency}}{{totalAmount}}</p>
+        	{{#if charityName}}
+            	<p>Donazione di beneficenza: {{donationAmount}}%</p>
+            	<p>Ente di beneficenza: {{charityName}}</p>
+        	{{/if}}
+    	<p>Note aggiuntive sulla prenotazione: {{additionalNotes}}</p>
+    	<br>
+    	<p>Note post riunione: {{postMeetingNotes}}</p>
+	</div>
+    {{else}}
+      {{! english }}
+     
+
+      <div>
+        <p>{{providerName}}
+          has completed a meeting, Meeting ID:
+          {{bookingId}}</p>
+        <p>Meeting Details:</p>
+        <p>Client's Name: {{clientName}}</p>
+        <p>Client's Email: {{clientEmail}}</p>
+        <p>Client's Phone: {{clientPhone}}</p>
+        <p>Provider's Name: {{providerName}}</p>
+        <p>Provider's Email: {{providerEmail}}</p>
+        <p>Meeting Type: {{meetingType}}</p>
+        <p>Meeting Date: {{meetingDate}}</p>
+        <p>Meeting Time: {{meetingTime}}</p>
+        <p>Meeting Duration: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Total Meeting Count: {{meetingCount}}</p>
+        {{/if}}
+        <p>Total Amount Paid: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Charity Donation: {{donationAmount}}%</p>
+          <p>Charity Name: {{charityName}}</p>
+        {{/if}}
+        <p>Additional Notes on Booking: {{additionalNotes}}</p>
+        <br />
+        <p>Post Meeting Notes: {{postMeetingNotes}}</p>
+      </div>
+    {{/if}}
+
+  </body>
+</html>

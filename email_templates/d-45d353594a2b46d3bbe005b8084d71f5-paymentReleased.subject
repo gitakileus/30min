@@ -1,0 +1,21 @@
+   {{#if ro}}
+      {{! romanian }}
+           Plata a fost eliberată - 30mins     
+    {{else if de}}
+      {{! German }}
+           Zahlung freigegeben - 30min     
+
+    {{else if po}}
+      {{! portuguese }}
+           Pagamento liberado - 30mins     
+
+    {{else if es}}
+      {{! esponal }}
+           Pago liberado - 30mins     
+    {{else if it}}
+      {{! italian }}
+           Pagamento autorizzato - 30mins     
+    {{else}}
+      {{! english }}
+           Payment Released - 30mins     
+    {{/if}}

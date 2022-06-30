@@ -1,0 +1,16 @@
+
+  <html>
+    <head>
+      <title>Refund Requested - 30mins</title>
+    </head>
+    <body>
+        <p>Hello {{providerName}},</p>
+        <p>A refund request has been opened by {{clientName}}</p>
+        <p>Refund Request Reason: {{refundReason}}</p>
+        <p>If you would like to contest this refund request, please reach out to accept@30mins.com ASAP</p>
+        
+        <p>You can review the meeting details here: <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        <p>Thank you, <br>30mins Support Team</p>
+        
+    </body>
+  </html>

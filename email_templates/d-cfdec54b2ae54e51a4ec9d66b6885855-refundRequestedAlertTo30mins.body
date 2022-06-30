@@ -1,0 +1,280 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+  
+    {{#if ro}}
+      {{! romanian }}
+
+      <div>
+        {{#if providerCanceled}}
+          <p>
+            Cerere de rambursare automată deschisă pentru
+            {{clientName}}, Furnizorul a anulat întâlnirea.</p>
+          <p>Motivul anulării: {{reportReason}}</p>
+        {{else}}
+          <p>{{clientName}}
+            a solicitat rambursarea pentru întâlnirea cu ID-ul:
+            {{bookingId}}</p>
+          <p>Motivul solicitării rambursării: {{refundRequestReason}}</p>
+        {{/if}}
+        <br />
+        <p>
+          Suma care urmează să fie eliberată organizatorului:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Donație cu scop caritabil: {{donationAmount}}%</p>
+          <p>Numele carității: {{charityName}}</p>
+        {{/if}}
+        <br />
+        <p>Detaliile întâlnirii:</p>
+        <p>Numele clientului: {{clientName}}</p>
+        <p>Email-ul clientului: {{clientEmail}}</p>
+        <p>Telefonul clientului: {{clientPhone}}</p>
+        <p>Numele organizatorului: {{providerName}}</p>
+        <p>Email-ul organizatorului: {{providerEmail}}</p>
+        <p>Tipul întâlnirii: {{meetingType}}</p>
+        <p>Data întâlnirii: {{meetingDate}}</p>
+        <p>Ora întâlnirii: {{meetingTime}}</p>
+        <p>Durata întâlnirii: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Numarul total de întâlniri: {{meetingCount}}</p>
+        {{/if}}
+        <p>Suma achitată totală: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donație cu scop caritabil: {{donationAmount}}%</p>
+          <p>Numele carității: {{charityName}}</p>
+        {{/if}}
+        <p>Notițe adiționale la rezervare: {{additionalNotes}}</p>
+        <br />
+        <p>Notițe Post-Întâlnire: {{postMeetingNotes}}</p>
+      </div>
+
+    {{else if de}}
+      {{! German }}
+      <div>
+        {{#if providerCanceled}}
+          <p>Automatische Erstattungsanfrage für
+            {{Kundenname}}
+            eröffnet, Anbieter hat Meeting abgesagt.</p>
+          <p>Grund für den Abbruch: {{reportReason}}</p>
+        {{else}}
+          <p>{{Kundenname}}
+            hat eine Erstattung für Meeting ID beantragt:
+            {{bookingId}}</p>
+          <p>Grund des Erstattungsantrags: {{refundRequestReason}}</p>
+        {{/if}}
+        <br />
+        <p>Der an den Veranstalter abzugebende Betrag:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Spende für wohltätige Zwecke: {{donationAmount}}%</p>
+          <p>Name der Wohltätigkeitsorganisation: {{charityName}}</p>
+        {{/if}}
+        <br />
+        <p>Details zum Treffen:</p>
+        <p>Name des Kunden: {{clientName}}</p>
+        <p>Die E-Mail des Kunden: {{clientEmail}}</p>
+        <p>Telefon des Kunden: {{clientPhone}}</p>
+        <p>Name des Veranstalters: {{providerName}}</p>
+        <p>E-Mail des Veranstalters: {{providerEmail}}</p>
+        <p>Art der Sitzung: {{meetingType}}</p>
+        <p>Termin der Sitzung: {{meetingDate}}</p>
+        <p>Zeit der Sitzung: {{meetingTime}}</p>
+        <p>Dauer der Sitzung: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Gesamtzahl der Sitzungen: {{meetingCount}}</p>
+        {{/if}}
+        <p>Gesamtbetrag gezahlt: {{Währung}}{{GesamtBetrag}}</p>>
+        {{#if charityName}}
+          <p>Spende für wohltätige Zwecke: {{donationAmount}}%</p>
+          <p>Name der Wohltätigkeitsorganisation: {{charityName}}</p>
+        {{/if}}
+        <p>Zusätzliche Hinweise zur Buchung: {{additionalNotes}}</p>
+        <br />
+        <p>Nachbemerkungen zur Sitzung: {{postMeetingNotes}}</p>
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+
+      <div>
+        {{#if providerCanceled}}
+          <p>Solicitação automática de reembolso aberta por
+            {{clientName}}, O organizador cancelou a reunião.</p>
+          <p>Motivo do cancelamento: {{reportReason}}</p>
+        {{else}}
+          <p>{{clientName}}
+            solicitou um reembolso para a reunião ID:
+            {{bookingId}}</p>
+          <p>Motivo da solicitação de reembolso: {{refundRequestReason}}</p>
+        {{/if}}
+        <br />
+        <p>Valor a ser liberado para o organizador:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Doação para Caridade: {{donationAmount}}%</p>
+          <p>Nome da Instituição de Caridade: {{charityName}}</p>
+        {{/if}}
+        <br />
+        <p>Detalhes da Reunião:</p>
+        <p>Nome do Cliente: {{clientName}}</p>
+        <p>E-mail do Cliente: {{clientEmail}}</p>
+        <p>Telefone do Cliente: {{clientPhone}}</p>
+        <p>Nome do Organizador: {{providerName}}</p>
+        <p>E-mail do Organizador: {{providerEmail}}</p>
+        <p>Tipo de Reunião: {{meetingType}}</p>
+        <p>Data da Reunião: {{meetingDate}}</p>
+        <p>Hora da Reunião: {{meetingTime}}</p>
+        <p>Duração da Reunião: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Total de Reuniões: {{meetingCount}}</p>
+        {{/if}}
+        <p>Valor Total Pago: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Doação para Caridade: {{donationAmount}}%</p>
+          <p>Nome da Instituição de Caridade: {{charityName}}</p>
+        {{/if}}
+        <p>Observações adicionais sobre a reserva: {{additionalNotes}}</p>
+        <br />
+        <p>Notas pós-reunião: {{postMeetingNotes}}</p>
+      </div>
+    {{else if es}}
+      {{! esponal }}
+
+      <div>
+        {{#if providerCanceled}}
+          <p>Solicitud de reembolso automático abierta por
+            {{clientName}}, El proveedor ha cancelado la reunión.</p>
+          <p>Razón de la cancelación: {{reportReason}}</p>
+        {{else}}
+          <p>{{clientName}}
+            ha solicitado un reembolso por la reunión ID:
+            {{bookingId}}</p>
+          <p>Razón de la solicitud de reembolso: {{refundRequestReason}}</p>
+        {{/if}}
+        <br />
+        <p>Cantidad a entregar al organizador:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Donación de caridad: {{donationAmount}}%</p>
+          <p>Nombre de la organización benéfica: {{charityName}}</p>
+        {{/if}}
+        <br />
+        <p>Detalles de la reunión:</p>
+        <p>Nombre del cliente: {{clientName}}</p>
+        <p>Correo electrónico del cliente: {{clientEmail}}</p>
+        <p>Teléfono del cliente: {{clientPhone}}</p>
+        <p>Nombre del organizador: {{providerName}}</p>
+        <p>Correo electrónico del organizador: {{providerEmail}}</p>
+        <p>Tipo de reunión: {{meetingType}}</p>
+        <p>Fecha de la reunión: {{meetingDate}}</p>
+        <p>Hora de la reunión: {{meetingTime}}</p>
+        <p>Duración de la reunión: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Reuniones totales: {{meetingCount}}</p>
+        {{/if}}
+        <p>Importe total pagado: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donación de caridad: {{donationAmount}}%</p>
+          <p>Nombre de la organización benéfica: {{charityName}}</p>
+        {{/if}}
+        <p>Notas adicionales sobre la reserva: {{additionalNotes}}</p>
+        <br />
+        <p>Notas sobre la reunión: {{postMeetingNotes}}</p>
+      </div>
+
+    {{else if it}}
+      {{! italian }}
+
+      <div>
+        {{#if providerCanceled}}
+          <p>Richiesta di rimborso automatico aperta per
+            {{clientName}}, L'organizzatore ha annullato la riunione.</p>
+          <p>Motivo della cancellazione: {{reportReason}}</p>
+        {{else}}
+          <p>{{clientName}}
+            ha richiesto il rimborso della riunione ID:
+            {{bookingId}}</p>
+          <p>Motivo della richiesta di rimborso: {{refundRequestReason}}</p>
+        {{/if}}
+        <br />
+        <p>Importo da rilasciare all'organizzatore
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Donazione di beneficenza: {{donationAmount}}%</p>
+          <p>Ente di beneficenza: {{charityName}}</p>
+        {{/if}}
+        <br />
+        <p>Dettagli della riunione:</p>
+        <p>noem del cliente: {{clientName}}</p>
+        <p>Email del cliente: {{clientEmail}}</p>
+        <p>Telefono del cliente: {{clientPhone}}</p>
+        <p>Nome dell’organizzatore: {{providerName}}</p>
+        <p>Email dell’organizzatore: {{providerEmail}}</p>
+        <p>Tipo di riunione: {{meetingType}}</p>
+        <p>Data della riunione: {{meetingDate}}</p>
+        <p>Ora della riunione: {{meetingTime}}</p>
+        <p>Durata della riunione: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>numero totale delle riunioni: {{meetingCount}}</p>
+        {{/if}}
+        <p>importo totale pagato: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Donazione di beneficenza: {{donationAmount}}%</p>
+          <p>Ente di beneficenza: {{charityName}}</p>
+        {{/if}}
+        <p>Note aggiuntive sulla prenotazione: {{additionalNotes}}</p>
+        <br />
+        <p>Note post riunione: {{postMeetingNotes}}</p>
+      </div>
+    {{else}}
+      {{! english }}
+
+      <div>
+        {{#if providerCanceled}}
+          <p>Automatic Refund Request Opened for
+            {{clientName}}, Provider has Canceled Meeting.</p>
+          <p>Cancel Reason: {{reportReason}}</p>
+        {{else}}
+          <p>{{clientName}}
+            has requested a refund for Meeting ID:
+            {{bookingId}}</p>
+          <p>Refund Request Reason: {{refundRequestReason}}</p>
+        {{/if}}
+        <br />
+        <p>Amount to be Released to Organizer:
+          {{currency}}{{amountToRelease}}</p>
+        {{#if charityName}}
+          <p>Charity Donation: {{donationAmount}}%</p>
+          <p>Charity Name: {{charityName}}</p>
+        {{/if}}
+        <br />
+        <p>Meeting Details:</p>
+        <p>Client's Name: {{clientName}}</p>
+        <p>Client's Email: {{clientEmail}}</p>
+        <p>Client's Phone: {{clientPhone}}</p>
+        <p>Organizer's Name: {{providerName}}</p>
+        <p>Organizer's Email: {{providerEmail}}</p>
+        <p>Meeting Type: {{meetingType}}</p>
+        <p>Meeting Date: {{meetingDate}}</p>
+        <p>Meeting Time: {{meetingTime}}</p>
+        <p>Meeting Duration: {{meetingDuration}} min</p>
+        {{#if multipleMeetings}}
+          <p>Total Meeting Count: {{meetingCount}}</p>
+        {{/if}}
+        <p>Total Amount Paid: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+          <p>Charity Donation: {{donationAmount}}%</p>
+          <p>Charity Name: {{charityName}}</p>
+        {{/if}}
+        <p>Additional Notes on Booking: {{additionalNotes}}</p>
+        <br />
+        <p>Post Meeting Notes: {{postMeetingNotes}}</p>
+      </div>
+
+    {{/if}}
+
+  </body>
+</html>

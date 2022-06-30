@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <p>Salut {{ownerName}},</p>
+      <p>{{requesterName}}
+        a cerut să se alăture la
+        {{organizationTitle}}
+        pe
+        <a href="https://30mins.com">30mins.com</a></p>
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/acceptOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:green;border-radius: 10px;
+	color:#ffffff;display:inline-block;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:green;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Acceptă</span>
+        </a></span>
+
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/rejectOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;border-radius: 10px;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Respinge</span>
+        </a></span>
+
+      <p>Best Regards, <br /> 30mins</p>
+    {{else if de}}
+      {{! German }}
+      <p>Hallo {{ownerName}},</p>
+      <p>{{AnfragestellerName}}
+        hat einen Antrag auf Beitritt zu
+        {{Organisationstitel}}
+        auf
+        <a href="https://30mins.com">30mins.com</a></p>
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/acceptOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:green;border-radius: 10px;
+	color:#ffffff;display:inline-block;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:green;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Annehmen</span>
+        </a></span>
+
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/rejectOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;border-radius: 10px;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Accept</span>
+        </a></span>
+
+      <p>Mit freundlichen Grüßen, <br /> 30mins</p>
+    {{else if po}}
+      {{! portuguese }}
+
+      <p>Olá {{ownerName}},</p>
+      <p>{{requesterName}}
+        pediu para se juntar a/ao
+        {{organizationTitle}}
+        no
+        <a href="https://30mins.com">30mins.com</a></p>
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/acceptOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:green;border-radius: 10px;
+	color:#ffffff;display:inline-block;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:green;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Aceitar</span>
+        </a></span>
+
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/rejectOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;border-radius: 10px;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Rejeitar</span>
+        </a></span>
+
+      <p>Atenciosamente, <br /> 30mins</p>
+
+    {{else if es}}
+      {{! esponal }}
+
+      <p>Hola {{ownerName}},</p>
+      <p>{{requesterName}}
+        desea unirse a
+        {{organizationTitle}}
+        en
+        <a href="https://30mins.com">30mins.com</a></p>
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/acceptOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:green;border-radius: 10px;
+	color:#ffffff;display:inline-block;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:green;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Accept</span>
+        </a></span>
+
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/rejectOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;border-radius: 10px;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Reject</span>
+        </a></span>
+
+      <p>Best Regards, <br /> 30mins</p>
+
+    {{else if it}}
+      {{! italian }}
+
+      <p>Salve {{ownerName}},</p>
+      <p>{{requesterName}}
+        ha chiesto di unirsi a
+        {{organizationTitle}}
+        su
+        <a href="https://30mins.com">30mins.com</a></p>
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/acceptOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:green;border-radius: 10px;
+	color:#ffffff;display:inline-block;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:green;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Accetta</span>
+        </a></span>
+
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/rejectOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;border-radius: 10px;
+	padding:3px 3px 3px 3px;
+	text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:red;
+	color:#ffffff;display:inline-block;
+	padding:6px 6px 6px 6px;
+	text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Rifiuta</span>
+        </a></span>
+
+      <p>Cordiali saluti, <br /> 30mins</p>
+    {{else}}
+      {{! english }}
+
+      <p>Hello {{ownerName}},</p>
+      <p>{{requesterName}}
+        has requested to join
+        {{organizationTitle}}
+        on
+        <a href="https://30mins.com">30mins.com</a></p>
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/acceptOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:green;border-radius: 10px;
+    color:#ffffff;display:inline-block;
+    padding:3px 3px 3px 3px;
+    text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:green;
+    color:#ffffff;display:inline-block;
+    padding:6px 6px 6px 6px;
+    text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Accept</span>
+        </a></span>
+
+      <span>
+        <a
+          href="https://30mins.com/api/organizations/rejectOrganizationMember?requestID={{requestID}}&amp;orgID={{organizationID}}"
+          style="color:#FFFFFF; background-color:red;
+    color:#ffffff;display:inline-block;border-radius: 10px;
+    padding:3px 3px 3px 3px;
+    text-align:center;text-decoration:none"
+        >
+
+          <span
+            style="color:#FFFFFF; background-color:red;
+    color:#ffffff;display:inline-block;
+    padding:6px 6px 6px 6px;
+    text-align:center;text-decoration:none"
+            class="background-color"
+          >
+            Reject</span>
+        </a></span>
+
+      <p>Best Regards, <br /> 30mins</p>
+    {{/if}}
+
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+      <title>{{subject}}</title>
+
+      <div>
+
+        <p>
+          Ai primit un mesaj de la:
+          {{name}}
+        </p>
+        <p>
+          Subiect:
+          {{subject}}
+          <br />
+          Email:
+          {{email}}
+          <br /><br />
+          Descriere:
+          {{description}}
+        </p>
+
+        <p>
+          Toate cele bune,
+          <br />
+          Echipa 30mins
+        </p>
+      </div>
+
+    {{else if de}}
+      {{! German }}
+      <div>
+        <p>
+          Sie haben eine Nachricht erhalten von:
+          {{name}}
+        </p>
+        <p>
+          Thema:
+          {{subject}}
+          <br />
+          Email:
+          {{email}}
+          <br /><br />
+          Beschreibung:
+          {{description}}
+        </p>
+
+        <p>
+          Mit freundlichen Grüßen,
+          <br />
+          30mins Team
+        </p>
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          Você recebeu uma mensagem de:
+          {{name}}
+        </p>
+        <p>
+          Assunto:
+          {{subject}}
+          <br />
+          E-mail:
+          {{email}}
+          <br /><br />
+          Descrição:
+          {{description}}
+        </p>
+
+        <p>
+          Atenciosamente,
+          <br />
+          30mins Equipe
+        </p>
+      </div>
+
+    {{else if es}}
+      {{! esponal }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          Has recibido un mensaje de:
+          {{name}}
+        </p>
+        <p>
+          Asunto:
+          {{subject}}
+          <br />
+          Correo electrónico:
+          {{email}}
+          <br /><br />
+          Descripción:
+          {{description}}
+        </p>
+
+        <p>
+          Saludos cordiales,
+          <br />
+          El equipo de 30mins
+        </p>
+      </div>
+
+    {{else if it}}
+      {{! italian }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          Hai ricevuto un messaggio da:
+          {{name}}
+        </p>
+        <p>
+          Oggetto:
+          {{subject}}
+          <br />
+          Email:
+          {{email}}
+          <br /><br />
+          Descrizione:
+          {{description}}
+        </p>
+
+        <p>
+          Cordiali saluti,
+          <br />
+          Il Team 30mins
+        </p>
+      </div>
+    {{else}}
+      {{! english }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          You have received a message from:
+          {{name}}
+        </p>
+        <p>
+          Subject:
+          {{subject}}
+          <br />
+          Email:
+          {{email}}
+          <br /><br />
+          Description:
+          {{description}}
+        </p>
+
+        <p>
+          Best Regards,
+          <br />
+          30mins Team
+        </p>
+      </div>
+    {{/if}}
+
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <p>Salut {{clientName}}</p>
+      <p>Un cont de client 30min a fost creat pentru tine. Poți accesa acest
+        cont la
+        <a
+          href="https://30mins.com/auth/login"
+        >https://30mins.com/auth/login</a></p>
+      <p>
+        Pur și simplu conectați-vă cu e-mailul pe care l-ați folosit în timpul
+        rezervării. Îți poți vedea și gestiona întâlnirile pe pagina Întâlnirile
+        mele, după completarea procesului de Bun Venit.</p>
+      <p>Salutări calde,<br />Echipa suport 30min</p>
+
+    {{else if de}}
+      {{! German }}
+
+      <p>Hello {{clientName}}</p>
+      <p>Es wurde ein 30mins-Kundenkonto für Sie eingerichtet. Sie können auf
+        dieses Konto zugreifen unter
+        <a
+          href="https://30mins.com/auth/login"
+        >https://30mins.com/auth/login</a></p>
+      <p>Melden Sie sich einfach mit der E-Mail an, die Sie bei der Buchung
+        verwendet haben. Nachdem Sie den Willkommensprozess abgeschlossen haben,
+        können Sie Ihre Besprechungen auf der Seite Meine Besprechungen anzeigen
+        und verwalten</p>
+      <p>Mit freundlichen Grüßen,<br />30mins Unterstützungsteam</p>
+    {{else if po}}
+      {{! portuguese }}
+
+      <p>Olá {{clientName}}</p>
+      <p>
+        Uma conta cliente 30min foi criada para você. Você pode acessar esta
+        conta em
+        <a
+          href="https://30mins.com/auth/login"
+        >https://30mins.com/auth/login</a>
+      </p>
+      <p>
+        Basta acessar com o e-mail que você usou durante a reserva. Você pode
+        visualizar e gerenciar suas reuniões na página Minhas Reuniões depois de
+        concluir o processo de boas-vindas
+      </p>
+      <p>Atenciosamente,<br />Equipe de Suporte 30min</p>
+    {{else if es}}
+      {{! esponal }}
+
+      <p>Hola {{clientName}}</p>
+      <p>Hemos creado una cuenta de cliente de 30mins para ti. Puedes acceder a
+        esta cuenta vía<a
+          href="https://30mins.com/auth/login"
+        >https://30mins.com/auth/login</a></p>
+      <p>Simplemente inicia sesión con el correo electrónico que utilizaste
+        durante la programación. Puedes ver y gestionar tus reuniones en ''Mis
+        Reuniones'' después de completar el proceso de bienvenida</p>
+      <p>Saludos cordiales,<br />el equipo de soporte de 30mins</p>
+
+    {{else if it}}
+      {{! italian }}
+
+      <p>Salve {{clientName}}</p>
+      <p>È stato creato il suo conto cliente 30mins. È possibile accederevi
+        tramite il link
+        <a
+          href="https://30mins.com/auth/login"
+        >https://30mins.com/auth/login</a></p>
+      <p>È sufficiente effettuare l'accesso con l'e-mail utilizzata al momento
+        della registrazione. Dopo aver completato il processo di benvenuto, è
+        possibile visualizzare e gestire le riunioni nella pagina "I miei
+        appuntamenti".</p>
+      <p>Kind Regards,<br />Team di Supporto 30mins</p>
+
+    {{else}}
+      {{! english }}
+
+      <p>Hello {{clientName}}</p>
+      <p>A 30mins client account has been created for you. You can access this
+        account at
+        <a
+          href="https://30mins.com/auth/login"
+        >https://30mins.com/auth/login</a></p>
+      <p>Simply Sign-In with the email you used during booking. You can view and
+        manage your meetings within your My Meetings page after you complete the
+        Welcome Process</p>
+      <p>Kind Regards,<br />30mins Support Team</p>
+
+    {{/if}}
+
+  </body>
+</html>

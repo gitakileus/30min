@@ -1,0 +1,153 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          {{inviterName}}
+          ({{inviterEmail}}) a trimis o nouă idee de extindere.
+        </p>
+        <p>
+          Titlul:
+          {{headline}}
+          <br />
+          Descrierea:
+          {{description}}
+        </p>
+
+        <p>
+          Toate cele bune,
+          <br />
+          Echipa 30mins
+        </p>
+
+      </div>
+    {{else if de}}
+    {{!-- German --}}
+      <div>
+        <p>
+          {{inviterName}}
+          ({{inviterEmail}}) hat eine neue Erweiterungsidee eingereicht.
+        </p>
+        <p>
+          Überschrift:
+          {{headline}}
+          <br />
+          Beschreibung:
+          {{description}}
+        </p>
+
+        <p>
+          Mit freundlichen Grüßen,
+          <br />
+          30mins Team
+        </p>
+
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          {{inviterName}}
+          ({{inviterEmail}}) enviou uma nova ideia de extensão.
+        </p>
+        <p>
+          Título:
+          {{headline}}
+          <br />
+          Descrição:
+          {{description}}
+        </p>
+
+        <p>
+          Atenciosamente,
+          <br />
+          Equipe 30mins
+        </p>
+
+      </div>
+    {{else if es}}
+      {{! esponal }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          {{inviterName}}
+          ({{inviterEmail}}) ha presentado una nueva idea de extensión.
+        </p>
+        <p>
+          Titular:
+          {{headline}}
+          <br />
+          Descripción:
+          {{description}}
+        </p>
+
+        <p>
+          Saludos cordiales,
+          <br />
+          El equipo de 30 mins
+        </p>
+
+      </div>
+
+    {{else if it}}
+      {{! italian }}
+      <title>{{subject}}</title>
+
+      <div>
+        <p>
+          {{inviterName}}
+          ({{inviterEmail}}) ha presentato una nuova idea di estensione.
+        </p>
+        <p>
+          Titolo:
+          {{headline}}
+          <br />
+          Descrizione:
+          {{description}}
+        </p>
+
+        <p>
+          Cordiali saluti,
+          <br />
+          Il Team 30mins
+        </p>
+
+      </div>
+    {{else}}
+      {{! english }}
+      <title>{{subject}}</title>
+      <div>
+        <p>
+          {{inviterName}}
+          ({{inviterEmail}}) has submitted a new extension idea.
+        </p>
+        <p>
+          Headline:
+          {{headline}}
+          <br />
+          Description:
+          {{description}}
+        </p>
+
+        <p>
+          Best Regards,
+          <br />
+          30mins Team
+        </p>
+
+      </div>
+    {{/if}}
+
+  </body>
+</html>

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'card.css';
+@import 'header.css';
+@import 'container.css';
+@import 'button.css';
+@import 'input.css';
+@import 'custom.css';

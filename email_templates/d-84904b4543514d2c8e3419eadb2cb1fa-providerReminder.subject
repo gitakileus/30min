@@ -1,0 +1,76 @@
+   {{#if ro}}
+      {{! romanian }}
+           
+        {{#if reminder15min}}
+          Întâlnirea cu{{clientName}}
+          începe curând
+        {{else}}
+          Întâlnire cu{{clientName}}
+          în 24 de ore
+        {{/if}}
+           
+    {{else if de}}
+      {{! German }}
+           
+        {{#if reminder15min}}
+          Treffen mit
+          {{clientName}}
+          demnächst
+        {{else}}
+          Treffen mit
+          {{Kundenname}}
+          in 24-Stunden
+        {{/if}}
+           
+    {{else if po}}
+      {{! portuguese }}
+           
+        {{#if reminder15min}}
+          Reunião com
+          {{clientName}}
+          começando em breve
+        {{else}}
+          Reunião com{{clientName}}
+          em 24 horas
+        {{/if}}
+           
+    {{else if es}}
+      {{! esponal }}
+           
+        {{#if reminder15min}}
+          La reunión con
+          {{clientName}}
+          comenzará pronto
+        {{else}}
+          Reunión con
+          {{clientName}}
+          en 24 horas
+        {{/if}}
+           
+    {{else if it}}
+      {{! italian }}
+           
+        {{#if reminder15min}}
+          La riunione con
+          {{clientName}}
+          inizierà a breve
+        {{else}}
+          Riunione con
+          {{clientName}}
+          in 24-ore
+        {{/if}}
+           
+    {{else}}
+      {{! english }}
+           
+        {{#if reminder15min}}
+          Meeting with
+          {{clientName}}
+          Starting Soon
+        {{else}}
+          Meeting with
+          {{clientName}}
+          in 24-hours
+        {{/if}}
+           
+    {{/if}}

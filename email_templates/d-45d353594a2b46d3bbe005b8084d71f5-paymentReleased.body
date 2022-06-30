@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <div>
+        <p>Salut {{providerName}}</p>
+        <p>Un cec de
+          {{currency}}{{totalAmount}}
+          a fost expediat la adresa dvs. de facturare înregistrată.</p>
+        <br />
+        <p>
+          Dacă nu ați primit plata sau aveți nevoie de asistență, vă rugăm să
+          contactați echipa noastră de asistență la accept@30mins.com.Vom reveni
+          cât mai curând posibil.</p>
+        <p>Mulțumin, <br />Echipa suport 30mins</p>
+
+      </div>
+    {{else if de}}
+      {{! German }}
+      <div>
+        <p>Hallo {{providerName}}</p>
+        <p>Ein Scheck in Höhe von
+          {{Währung}}{{Gesamtbetrag}}
+          wurde an die angegebene Rechnungsadresse gesendet.</p>
+        <br />
+        <p>Wenn Sie keine Zahlung erhalten haben oder Hilfe benötigen, wenden
+          Sie sich bitte an unser Support-Team unter accept@30mins.com. Wir
+          werden uns so schnell wie möglich bei Ihnen melden.</p>
+        <p>Dankeschön, <br />30mins Support Team</p>
+
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+
+      <div>
+        <p>Olá {{providerName}}</p>
+        <p>Um pagamento de
+          {{currency}}{{totalAmount}}
+          foi enviado para seu endereço de cobrança registrado.</p>
+        <br />
+        <p>Se você não recebeu o pagamento ou precisa de ajuda, entre em contato
+          com nossa equipe de suporte em accept@30mins.com. Nós entraremos em
+          contato com você o mais rápido possível.</p>
+        <p>Obrigado, <br />30mins Equipe de Suporte</p>
+
+      </div>
+    {{else if es}}
+      {{! esponal }}
+
+      <div>
+        <p>Hola {{providerName}}</p>
+        <p>Se ha enviado un cheque de
+          {{currency}}{{totalAmount}}
+          a tu dirección de facturación registrada.</p>
+        <br />
+        <p>Si no has recibido el pago o necesitas ayuda, ponte en contacto con
+          nuestro equipo de soporte escribiendo a accept@30mins.com. Te
+          contestaremos lo antes posible.</p>
+        <p>Gracias, <br />el equipo de soporte de 30mins</p>
+
+      </div>
+
+    {{else if it}}
+      {{! italian }}
+
+      <div>
+        <p>Salve {{providerName}}</p>
+        <p>Un assegno di
+          {{currency}}{{totalAmount}}
+          è stato spedito all'indirizzo di fatturazione registrato..</p>
+        <br />
+        <p>Se non hai ricevuto il pagamento o se hai bisogno di assistenza,
+          contatta il nostro team di supporto all'indirizzo accept@30mins.com.
+          Ti risponderemo al più presto.</p>
+        <p>Grazie, <br />il Team di Supporto 30min</p>
+
+      </div>
+    {{else}}
+      {{! english }}
+
+      <div>
+        <p>Hello {{providerName}}</p>
+        <p>A cheque of
+          {{currency}}{{totalAmount}}
+          has been shipped to your Billing Address on record.</p>
+        <br />
+        <p>If you did not recieve payment, or you require assitance, please
+          contact our support team at accept@30mins.com. We will get back to you
+          ASAP.</p>
+        <p>Thank you, <br />30mins Support Team</p>
+
+      </div>
+    {{/if}}
+
+  </body>
+</html>

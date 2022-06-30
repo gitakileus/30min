@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <div>
+        <p>Salut {{providerName}},</p>
+        <p>{{clientName}}
+          a deschis un raport privitor la întâlnirea furnizată de tine.</p>
+        <p>Motivul raportării: {{reportReason}}</p>
+        <p>Pentru a contesta acest raport, adresează-te la accept@30mins.com cât
+          mai rapid posibil. Poți să vezi și să îți gestionezi întâlnirea aici:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        <p>Mulțumim,<br />Echipa suport 30mins</p>
+
+      </div>
+    {{else if ge}}
+      {{! German  }}
+
+      <div>
+        <p>Hallo {{providerName}},</p>
+        <p>{{clientName}}
+          hat einen Bericht über ein von Ihnen bereitgestelltes Meeting
+          eröffnet.</p>
+        <p>Grund für den Bericht: {{reportReason}}</p>
+        <p>Um diesen Bericht anzufechten, wenden Sie sich bitte so schnell wie
+          möglich an accept@30mins.com. Hier können Sie Ihr Meeting einsehen und
+          verwalten:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        <p>Dankeschön,<br />30mins Support Team</p>
+
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+
+      <div>
+        <p>Olá {{providerName}},</p>
+        <p>{{clientName}}
+          abriu uma denúncia contra uma reunião que você forneceu.</p>
+        <p>Motivo da Denúncia: {{reportReason}}</p>
+        <p>Para contestar esta denúncia, entre em contato accept@30mins.com o
+          mais breve possível. Você pode visualizar e gerenciar sua reunião
+          aqui:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        <p>Obrigado,<br />Equipe de Suporte 30mins</p>
+
+      </div>
+    {{else if es}}
+      {{! esponal }}
+
+      <div>
+        <p>Hola {{providerName}},</p>
+        <p>{{clientName}}
+          ha abierto un informe contra una reunión que has proporcionado.</p>
+        <p> Razón del informe: {{reportReason}}</p>
+        <p>
+          Para refutar este informe, por favor, ponte en contacto con
+          accept@30mins.com lo antes posible. Puedes ver y gestionar tu reunión
+          aquí:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        <p>Gracias,<br />30mins El equipo de soporte</p>
+
+      </div>
+
+    {{else if it}}
+      {{! italian }}
+
+      <div>
+        <p>Salve {{providerName}},</p>
+        <p>{{clientName}}
+          ha aperto una segnalazione su una riunione organizzata da te.</p>
+        <p>Motivo della segnalazione: {{reportReason}}</p>
+        <p>Per contestare questa segnalazione, si prega di comunicare al più
+          presto con l'indirizzo accept@30mins.com. È possibile visualizzare e
+          gestire la riunione qui:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        <p>Grazie,<br />Il Team di Supporto 30mins</p>
+
+      </div>
+    {{else}}
+      {{! english }}
+
+      <div>
+        <p>Hello {{providerName}},</p>
+        <p>{{clientName}}
+          has opened a report against a meeting you provided.</p>
+        <p>Report Reason: {{reportReason}}</p>
+        <p>To contest this Report, please contact accept@30mins.com ASAP. You
+          can view and manage your meeting here:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        <p>Thank you,<br />30mins Support Team</p>
+
+      </div>
+    {{/if}}
+
+  </body>
+</html>

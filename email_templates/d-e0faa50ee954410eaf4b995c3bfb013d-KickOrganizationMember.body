@@ -1,0 +1,110 @@
+<html>
+
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      <p>
+        Salut
+        {{memberName}}, nu mai ești membru al
+        {{orgName}}
+        pe 30mins.com.
+        <br /><br />
+        Motiv:
+        {{kickReason}}
+
+      </p>
+      <p>
+        Toate cele bune,
+        <br />
+        Echipa 30mins
+      </p>
+    {{else if de}}
+      <p>
+        Hallo
+        {{Mitgliedsname}}, Sie sind nicht mehr Mitglied von
+        {{Organisationsname}}
+        auf 30mins.com.
+        <br /><br />
+        Grunde:
+        {{kickReason}}
+
+      </p>
+      <p>
+        Mit freundlichen Grüßen,
+        <br />
+        30mins Team
+      </p>
+
+    {{else if po}}
+      <p>
+        Ola
+        {{memberName}}, você não é mais um membro de
+        {{orgName}}
+        no 30mins.com.
+        <br /><br />
+        Motivo:
+        {{kickReason}}
+
+      </p>
+      <p>
+        Atenciosamente,
+        <br />
+        Equipe 30mins
+      </p>
+
+    {{else if es}}
+      <p>
+        Hola
+        {{memberName}}, ya no eres miembro de
+        {{orgName}}
+        en 30mins.com.
+        <br /><br />
+        Razón:
+        {{kickReason}}
+
+      </p>
+      <p>
+        Saludos cordiales,
+        <br />
+        El equipo de 30mins
+      </p>
+
+    {{else if it}}
+      <p>
+        Salve
+        {{memberName}}, non sei più un membro di
+        {{orgName}}
+        su30mins.com.
+        <br /><br />
+        Motivo:
+        {{kickReason}}
+
+      </p>
+      <p>
+        Saluti,
+        <br />
+        Il Team 30mins
+      </p>
+    {{else}}
+
+      <p>
+        Hello
+        {{memberName}}, you are no longer a member of
+        {{orgName}}
+        on 30mins.com.
+        <br /><br />
+        Reason:
+        {{kickReason}}
+
+      </p>
+      <p>
+        Best Regards,
+        <br />
+        30mins Team
+      </p>
+    {{/if}}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+
+  <html>
+    <head>
+      <title>Extension Payment</title>
+    </head>
+    <body>
+      <div>
+        <p>Hello {{customerName}},</p>
+        <p>Thank you for your recent purchase, we're happy you're enjoying our service<br/>
+        You may view/download your Invoice Here: <a href="{{invoiceLink}}">Payment Invoice</a>
+        </p>
+        <p>
+            Best Regards,<br/>
+            30mins
+        </p>
+      </div>
+    </body>
+  </html>

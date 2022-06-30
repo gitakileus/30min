@@ -1,0 +1,22 @@
+ {{#if ro}}
+      {{! romanian }}
+         Cont 30min creat   
+    {{else if de}}
+      {{! German }}
+
+         30min Account Created   
+    {{else if po}}
+      {{! portuguese }}
+         Conta 30min Criada   
+    {{else if es}}
+      {{! esponal }}
+
+         Cuenta de 30 mins creada   
+    {{else if it}}
+      {{! italian }}
+         Account 30min creato   
+    {{else}}
+      {{! english }}
+         30min Account Created   
+
+    {{/if}}

@@ -1,0 +1,9 @@
+
+  <html>
+    <head>
+      <title>30mins - OTP</title>
+    </head>
+    <body>
+        <p>OTP Token: {{otpToken}}</p>
+    </body>
+  </html>

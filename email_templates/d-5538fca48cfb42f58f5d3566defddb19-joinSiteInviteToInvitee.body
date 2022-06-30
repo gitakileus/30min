@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+   
+      <p>Salut {{inviteeName}},</p>
+      <p>
+        Sper că totul e bine. Nu sunt sigur dacă utilizezi deja un serviciu de
+        programare sau ești în căutarea unei soluții care să le permită
+        clienților/prospecților tăi să programeze întâlniri cu tine fără a îți
+        oferi disponibilitate..</p>
+      Accesează acest link pentru activarea contului tău 30min:
+      <a href="{{joinLink}}">{{joinLink}}</a>
+
+      <p>
+        Odată ce îl activezi, vei obține propriul link. De obicei, oamenii
+        adaugă acel link în semnătura lor de e-mail. Poate dorești să faceți
+        același lucru.</p>
+
+      <p>Și, nu doar acest link, poți crea multe alte link-uri de servicii ca
+        acesta. Poți crea servicii plătite în care persoanei care efectuează
+        rezervări i se percepe o taxă de rezervare. Plata poate fi directă către
+        tine sau puteți oferi prin ESCROW prin noi. De asemenea, poți crea
+        întâlniri recurente, permițându-le celor ce au facut rezervarea
+        Opțional, să rezerve întâlniri săptămânale recurente cu tine.
+      </p>
+
+      <p>Toate cele bune, <br /> {{inviterName}}</p>
+    {{else if de}}
+      {{! German }}
+     
+        	<p>Hallo {{InviteeName}},</p>
+        <p>
+          Ich hoffe, alles ist gut.  Ich bin mir nicht sicher, ob Sie bereits einen Terminplanungsdienst nutzen oder nach einer Lösung suchen, die es Ihren Kunden/Interessenten ermöglicht, Besprechungen mit Ihnen zu vereinbaren, ohne dass das Hin und Her um die Verfügbarkeit entfällt.
+          Hier ist der Link, den Sie anklicken können, um Ihr 30mins-Konto zu aktivieren:
+          <a href="{{joinLink}}">{{joinLink}}</a>
+        </p>
+
+      <p>Nach der Aktivierung erhalten Sie Ihren eigenen Link. Normalerweise fügen die Leute diesen Link in ihre E-Mail-Signatur ein. Vielleicht möchten Sie dasselbe tun.</p>
+
+      <p>Und nicht nur dieser Link, Sie können viele weitere Service-Links wie diesen erstellen. Sie können kostenpflichtige Dienste erstellen, bei denen dem Buchenden eine Buchungsgebühr berechnet wird. Die Zahlung kann direkt an Sie erfolgen oder Sie können über ESCROW durch uns anbieten. Sie können auch wiederkehrende Besprechungen erstellen, so dass Buchende 
+    optional wöchentlich wiederkehrende Besprechungen mit Ihnen buchen können. </p>
+
+        <p>Mit freundlichen Grüßen, <br/> {{Einladungsname}}</p>
+    {{else if po}}
+      {{! portuguese }}
+     
+      <p>Olá {{inviteeName}},</p>
+      <p>
+        Espero que esteja tudo.Não tenho certeza se você já está usando um
+        serviço de agendamento ou está procurando uma solução para permitir que
+        seus clientes ou potenciais clientes agendem reuniões com você sem as
+        oscilações de disponibilidade.</p>
+      Aqui está o link que você pode clicar para ativar sua conta 30mins:
+      <a href="{{joinLink}}">{{joinLink}}</a>
+
+      <p>Uma vez que você ativar, receberá seu próprio link. Normalmente, as
+        pessoas adicionam esse link à sua assinatura de e-mail. Você pode querer
+        fazer o mesmo.</p>
+
+      <p>E, não apenas este link, você pode criar muitos outros links de serviço
+        como este. Você pode criar serviços pagos em que é cobrada uma taxa de
+        reserva. O pagamento pode ser direto para você ou você pode oferecer via
+        escrow através de nós. Você também pode criar reuniões recorrentes,
+        permitindo que os clientes reservem opcionalmente reuniões regulares
+        semanais com você.
+      </p>
+
+      <p>Atenciosamente, <br /> {{inviterName}}</p>
+
+    {{else if es}}
+      {{! esponal }}
+   
+      <p>Hola {{inviteeName}},</p>
+      <p>
+        Espero que todo esté bien. No sé si ya estás utilizando un servicio de
+        programación, o si estás buscando una solución para que tus
+        clientes/posibles clientes puedan programar reuniones contigo sin tener
+        que esperar a que haya disponibilidad.</p>
+      Este es el enlace en el que puedes hacer clic para activar tu cuenta de
+      30mins:
+      <a href="{{joinLink}}">{{joinLink}}</a>
+
+      <p>Una vez que la actives, obtendrás tu propio enlace. Normalmente, la
+        gente añade ese enlace en su firma de correo electrónico. Puede que
+        quieras hacer lo mismo.</p>
+
+      <p>Y, no sólo este enlace, puedes crear muchos más enlaces de servicios
+        como este. Puede crear servicios de pago en los que se cobre una cuota
+        de reserva a la persona que realiza la reserva. El pago puede ser
+        directo a ti o puedes ofrecerlo vía ESCROW a través de nosotros. También
+        puedes crear reuniones recurrentes, ofreciendo a los clientes la
+        posibilidad de programar reuniones semanales recurrentes contigo.</p>
+
+      <p>Saludos cordiales, <br /> {{inviterName}}</p>
+
+    {{else if it}}
+      {{! italian }}
+    
+      <p>Salve {{inviteeName}},</p>
+      <p>
+        Spero che tutto vada bene. Non so se usi già un servizio di
+        pianificazione o se stai cercando una soluzione per consentire ai tuoi
+        candidati/clienti di programmare riunioni con te senza perdere tempo
+        nella ricerca di disponibilità reciproca..</p>
+      Ecco il link da cliccare per attivare l'account 30mins:
+      <a href="{{joinLink}}">{{joinLink}}</a>
+
+      <p>Una volta attivato, verrà fornito un link personale. In genere, le
+        persone aggiungono il link nella firma della propria e-mail. Consigliamo
+        di fare lo stesso.</p>
+
+      <p>Inoltre, è possibile creare molti altri link come questo. È possibile
+        creare servizi a pagamento in cui al prenotante viene addebitato un
+        costo di prenotazione. Il pagamento può essere effettuato direttamente a
+        te o tramite ESCROW, attraverso di noi. È inoltre possibile creare
+        riunioni ricorrenti, consentendo ai prenotanti di prenotare riunioni
+        settimanali ricorrenti con te .
+      </p>
+
+      <p>Cordiali saluti, <br /> {{inviterName}}</p>
+    {{else}}
+      {{! english }}
+
+      <p>Hello {{inviteeName}},</p>
+      <p>
+        Hope all is well. Not sure if you are already using a scheduling
+        service, or are looking for a solution to enable your
+        customers/prospects to schedule meetings with you without the back and
+        forth for availability.</p>
+      Here is the link you can click to activate your 30mins account:
+      <a href="{{joinLink}}">{{joinLink}}</a>
+
+      <p>Once you activate you will get your own link. Typically, people add
+        that link in their email signature. You may want to do the same.</p>
+
+      <p>And, not just this link, you can create many more service links like
+        this. You can create paid services where the booker is charged a booking
+        fee. The payment can be direct to you or you can offer via ESCROW thru
+        us. You can also create recurring meetings, allowing bookers to
+        optionally book weekly recurring meetings with you.
+      </p>
+
+      <p>Best Regards, <br /> {{inviterName}}</p>
+    {{/if}}
+
+  </body>
+
+</html>

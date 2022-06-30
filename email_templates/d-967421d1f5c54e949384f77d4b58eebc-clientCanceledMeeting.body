@@ -1,0 +1,93 @@
+<html>
+  <head>
+  <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+      <div>
+        <p>Salut
+          {{providerName}},
+          {{clientName}}
+          a anulat întâlnirea cu tine.</p>
+        <br />
+        <p>Motivul: {{reason}}</p>
+        <p>Poți vedea detaliile întâlnirii la:
+          https://30mins.com/user/meetingDetails/{{bookingId}}</p>
+        {{#if isPaid}}
+          <p>Plata va fi returnată clientului </p>
+        {{/if}}
+      </div>
+    {{else if de}}
+      {{!-- German --}}
+      <div>
+        <p>Hallo {{AnbieterName}}, {{KundenName}} hat einen Termin mit Ihnen abgesagt.</p>
+        <br/>
+        <p>Grund: {{reason}}</p>
+        <p>Sie können die Details des Treffens einsehen unter: https://30mins.com/user/meetingDetails/{{bookingId}}</p>
+        {{#if isPaid}}
+        <p>Die Zahlung wird dem Kunden zurückerstattet</p>
+        {{/if}}
+      </div>
+    
+    {{else if po}}
+      {{! portuguese }}
+  
+      <div>
+        <p>Olá
+          {{providerName}},
+          {{clientName}}
+          cancelou uma reunião com você.</p>
+        <br />
+        <p>Motivo: {{reason}}</p>
+        <p>Você pode ver os detalhes da reunião em:
+          https://30mins.com/user/meetingDetails/{{bookingId}}</p>
+        {{#if isPaid}}
+          <p>O pagamento será reembolsado ao cliente</p>
+        {{/if}}
+      </div>
+
+    {{else if es}}
+      {{! esponal }}
+
+  	<div>
+    	<p>Hola {{providerName}}, {{clientName}} ha cancelado una reunión contigo.</p>
+    	<br/>
+    	<p>Razón: {{reason}}</p>
+    	<p>Puedes ver los detalles de la reunión en: https://30mins.com/user/meetingDetails/{{bookingId}}</p>
+    	{{#if isPaid}}
+    	<p>El pago se devolverá al cliente</p>
+    	{{/if}}
+  	</div>
+    {{else if it}}
+      {{! italian }}
+      <div>
+    	<p>Salve {{providerName}}, {{clientName}} ha annullato una riunione con te.</p>
+    	<br/>
+    	<p>Motivo: {{reason}}</p>
+    	<p>I dettagli della riunione sono disponibili al seguente indirizzo: https://30mins.com/user/meetingDetails/{{bookingId}}</p>
+    	{{#if isPaid}}
+    	<p>Il pagamento sarà rimborsato al Cliente</p>
+    	{{/if}}
+  	</div>
+    {{else}}
+      {{! english }}
+      <title>{{clientName}} has canceled a meeting with you</title>
+      <div>
+        <p>Hello
+          {{providerName}},
+          {{clientName}}
+          has canceled a meeting with you.</p>
+        <br />
+        <p>Reason: {{reason}}</p>
+        <p>You can view the meeting details at:
+          https://30mins.com/user/meetingDetails/{{bookingId}}</p>
+        {{#if isPaid}}
+          <p>Payment will be refunded to the Client</p>
+        {{/if}}
+      </div>
+    {{/if}}
+
+  </body>
+</html>

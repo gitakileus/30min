@@ -1,0 +1,530 @@
+<html>
+  <head>
+
+   <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <div>
+        <p>Salut {{providerName}},</p>
+        <p>{{clientName}} a rezervat o întâlnire {{meetingType}} cu tine</p>
+        <p>
+          Numele clientului:
+          {{clientName}}
+          <br />
+          Email-ul clientului:
+          {{clientEmail}}
+          <br />
+          Telefonul clientului:
+          {{clientPhone}}
+          {{#if ccList}}
+            <br />
+            Destinatarii CC:
+            {{ccList}}
+          {{/if}}
+        </p>
+        <p>
+          Subiectul întâlnirii:
+          {{subject}}
+          <br />
+          Data întâlnirii:
+          {{meetingDate}}
+          <br />
+          Timpul întâlnirii:
+          {{meetingTime}}
+          <br />
+          Durata întâlnirii:
+          {{meetingDuration}}
+          min
+        </p>
+        {{#if multipleMeetings}}
+          <p>Totalul de întâlniri: {{meetingCount}}</p>
+          <p>
+            Întâlnirile recurente vor avea loc în aceeași zi a săptămânii și la
+            aceeași oră cu prima întâlnire
+          </p>
+        {{/if}}
+        {{#if isPaid}}
+          <p>Suma achitată totală: {{currency}}{{totalAmount}}</p>
+          {{#if charityName}}
+            <p>Donație cu scop caritabil: {{donationAmount}}</p>
+            <p>Numele carității: {{charityName}}</p>
+          {{/if}}
+        {{/if}}
+        {{#if additionalNotes}}
+          <p>Notițe adiționale de la client: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Meeting Type:
+          {{meetingType}}
+          <br />
+          {{#if conferenceLink}}
+            Link-ul întâlnirii:
+            <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+          {{/if}}
+          {{#if zoomStartUrl}}
+            Link-ul pornirii unei întâlniri:
+            <a href="{{zoomStartUrl}}">{{zoomStartUrl}}</a><br />
+            Link-ul intrării în întâlnire:
+            <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Parola Zoom:
+            {{zoomPassword}}
+          {{/if}}
+        </p>
+
+        <br />
+        <p>Nu uita să îți verifici calendarul.</p>
+        <p>
+          După întâlnire,fii sigur că marchezi întâlnirea ca Finalizată
+          <br />Poți vedea/gestiona întâlnirea aici:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if isEscrow}}
+          <p>
+            Odată ce ați marcat întâlnirea ca finalizată, plata va fi eliberată
+            după ce Clientul confirmă finalizarea sau la 3 zile fără răspuns din
+            partea Clientului.</p>
+        {{/if}}
+
+        <p>
+          Toate cele bune,<br />
+          Echipa 30mins
+        </p>
+      </div>
+    {{else if de}}
+      {{! German }}
+      <div>
+        <p>Hallo {{providerName}},</p>
+        <p>{{clientName}}
+          hat einen
+          {{meetingType}}
+          Termin mit Ihnen vereinbart</p>
+        <p>
+          Name des Kunden:
+          {{clientName}}
+          <br />
+          E-Mail des Kunden:
+          {{clientEmail}}
+          <br />
+          Telefon des Kunden:
+          {{clientPhone}}
+          {{#if ccList}}
+            <br />
+            CC-Empfänger:
+            {{ccList}}
+          {{/if}}
+        </p>
+        <p>
+          Thema der Sitzung:
+          {{subject}}
+          <br />
+          Datum der Sitzung:
+          {{meetingDate}}
+          <br />
+          Uhrzeit der Sitzung:
+          {{meetingTime}}
+          <br />
+          Dauer der Sitzung:
+          {{meetingDuration}}
+          min
+        </p>
+        {{#if multipleMeetings}}
+          <p>Gesamttreffen: {{meetingCount}}</p>
+          <p>Wiederkehrende Treffen finden am selben Wochentag und zur selben
+            Uhrzeit wie das erste Treffen statt</p>
+        {{/if}}
+        {{#if isPaid}}
+          <p>Gezahlter Gesamtbetrag: {{currency}}{{totalAmount}}</p>
+          {{#if charityName}}
+            <p>Spende für wohltätige Zwecke: {{donationAmount}}</p>
+            <p>Name der Wohltätigkeitsorganisation: {{charityName}}</p>
+          {{/if}}
+        {{/if}}
+        {{#if additionalNotes}}
+          <p>Zusätzliche Anmerkungen des Kunden: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Art der Sitzung:
+          {{meetingType}}
+          <br />
+          {{#if conferenceLink}}
+            Link zum Treffen:
+            <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+          {{/if}}
+          {{#if zoomStartUrl}}
+            Link zu Meeting starten:
+            <a href="{{zoomStartUrl}}">{{zoomStartUrl}}</a><br />
+            Link zur Teilnahme am Meeting:
+            <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Passwort vergrößern:
+            {{zoomPassword}}
+          {{/if}}
+        </p>
+
+        <br />
+        <p>Vergessen Sie nicht, Ihren Kalender zu überprüfen.</p>
+        <p>Nach Ihrer Besprechung sollten Sie die Besprechung als abgeschlossen
+          markieren.
+          <br />Sie können Ihr Meeting hier einsehen/verwalten:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if isEscrow}}
+          <p>Wenn Sie die Besprechung als abgeschlossen markiert haben, wird die
+            Zahlung freigegeben, nachdem der Kunde den Abschluss bestätigt hat
+            oder 3 Tage lang keine Antwort vom Kunden erfolgt ist.</p>
+        {{/if}}
+
+        <p>
+          Mit freundlichen Grüßen,<br />
+          30mins Team
+        </p>
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+
+      <div>
+        <p>Olá {{providerName}},</p>
+        <p>{{clientName}} agendou uma {{meetingType}} reunião com você</p>
+        <p>
+          Nome do Cliente:
+          {{clientName}}
+          <br />
+          E-mail do Cliente:
+          {{clientEmail}}
+          <br />
+          Telefone do Cliente:
+          {{clientPhone}}
+          {{#if ccList}}
+            <br />
+            CC Destinatários:
+            {{ccList}}
+          {{/if}}
+        </p>
+        <p>
+          Assuntos da Reunião:
+          {{subject}}
+          <br />
+          Data da Reunião:
+          {{meetingDate}}
+          <br />
+          Hora da Reunião:
+          {{meetingTime}}
+          <br />
+          Duração da Reunião:
+          {{meetingDuration}}
+          min
+        </p>
+        {{#if multipleMeetings}}
+          <p>Total de Reuniões: {{meetingCount}}</p>
+          <p>As reuniões recorrentes acontecerão no mesmo dia da semana e no
+            mesmo horário da primeira reunião</p>
+        {{/if}}
+        {{#if isPaid}}
+          <p>Valor Total Pago: {{currency}}{{totalAmount}}</p>
+          {{#if charityName}}
+            <p>Doação para Caridade: {{donationAmount}}</p>
+            <p>Nome da Instituição de Caridade: {{charityName}}</p>
+          {{/if}}
+        {{/if}}
+        {{#if additionalNotes}}
+          <p>Notas Adicionais do Cliente: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Tipo de Reunião:
+          {{meetingType}}
+          <br />
+          {{#if conferenceLink}}
+            Link da Reunião:
+            <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+          {{/if}}
+          {{#if zoomStartUrl}}
+            Link para Iniciar a Reunião:
+            <a href="{{zoomStartUrl}}">{{zoomStartUrl}}</a><br />
+            Link para Participar da Reunião:
+            <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Senha do Zoom:
+            {{zoomPassword}}
+          {{/if}}
+        </p>
+
+        <br />
+        <p>Não esqueça de conferir o seu calendário</p>
+        <p>Após a reunião, certifique-se de marcar a reunião como concluída
+          <br />Você pode visualizar ou gerenciar sua reunião aqui:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if isEscrow}}
+          <p>Depois de marcar a reunião como concluída, o pagamento será
+            liberado após o Cliente confirmar a conclusão, ou depois de 3 dias
+            sem resposta do Cliente.</p>
+        {{/if}}
+
+        <p>
+          Atenciosamente,<br />
+          Equipe 30mins
+        </p>
+      </div>
+    {{else if es}}
+      {{! esponal }}
+
+      <div>
+        <p>Hola {{providerName}},</p>
+        <p>{{clientName}} ha programado una reunión {{meetingType}} contigo</p>
+        <p>
+          Nombre del cliente:
+          {{clientName}}
+          <br />
+          Correo electrónico del cliente:
+          {{clientEmail}}
+          <br />
+          Teléfono del cliente:
+          {{clientPhone}}
+          {{#if ccList}}
+            <br />
+            Destinatarios en copia:
+            {{ccList}}
+          {{/if}}
+        </p>
+        <p>
+          Asunto de la reunión:
+          {{subject}}
+          <br />
+          Fecha de la reunión:
+          {{meetingDate}}
+          <br />
+          Hora de la reunión:
+          {{meetingTime}}
+          <br />
+          Duración de la reunión:
+          {{meetingDuration}}
+          min
+        </p>
+        {{#if multipleMeetings}}
+          <p>Reuniones totales: {{meetingCount}}</p>
+          <p>Las reuniones periódicas tendrán lugar el mismo día de la semana y
+            a la misma hora que la primera reunión</p>
+        {{/if}}
+        {{#if isPaid}}
+          <p>Importe total pagado: {{currency}}{{totalAmount}}</p>
+          {{#if charityName}}
+            <p>Donación de caridad: {{donationAmount}}</p>
+            <p>Nombre de la organización benéfica: {{charityName}}</p>
+          {{/if}}
+        {{/if}}
+        {{#if additionalNotes}}
+          <p>Notas adicionales del cliente: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Tipo de reunión:
+          {{meetingType}}
+          <br />
+          {{#if conferenceLink}}
+            Enlace a la reunión:
+            <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+          {{/if}}
+          {{#if zoomStartUrl}}
+            Enlace para iniciar la reunión:
+            <a href="{{zoomStartUrl}}">{{zoomStartUrl}}</a><br />
+            Enlace para unirse a la reunión:
+            <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Contraseña de zoom:
+            {{zoomPassword}}
+          {{/if}}
+        </p>
+
+        <br />
+        <p>No olvides consultar tu calendario.</p>
+        <p>Una vez terminada la reunión, asegúrate de marcarla como completa
+          <br />Puedes ver/gestionar tu reunión aquí:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if isEscrow}}
+          <p>Una vez que hayas marcado la reunión como completa, el pago será
+            liberado después de que el cliente confirme la finalización, o
+            después de 3 días sin respuesta por parte del cliente.</p>
+        {{/if}}
+
+        <p>
+          Saludos cordiales,<br />
+          El equipo de 30mins
+        </p>
+      </div>
+    {{else if it}}
+      {{! italian }}
+
+      <div>
+        <p>Salve {{providerName}},</p>
+        <p>{{clientName}} ha prenotato una riunione {{meetingType}} con te</p>
+        <p>
+          Nome cliente:
+          {{clientName}}
+          <br />
+          Email Cliente:
+          {{clientEmail}}
+          <br />
+          Telefono Cliente:
+          {{clientPhone}}
+          {{#if ccList}}
+            <br />
+            Destinatari CC:
+            {{ccList}}
+          {{/if}}
+        </p>
+        <p>
+          Argomento della riunione:
+          {{subject}}
+          <br />
+          Data della riunione:
+          {{meetingDate}}
+          <br />
+          Orario della riunione:
+          {{meetingTime}}
+          <br />
+          Durata della riunione:
+          {{meetingDuration}}
+          min
+        </p>
+        {{#if multipleMeetings}}
+          <p>Riunioni totali: {{meetingCount}}</p>
+          <p>Le riunioni ricorrenti si terranno nello stesso giorno della
+            settimana e alla stessa ora della prima riunione.</p>
+        {{/if}}
+        {{#if isPaid}}
+          <p>Totale pagato: {{currency}}{{totalAmount}}</p>
+          {{#if charityName}}
+            <p>Donazione di beneficenza: {{donationAmount}}</p>
+            <p>Ente di beneficenza: {{charityName}}</p>
+          {{/if}}
+        {{/if}}
+        {{#if additionalNotes}}
+          <p>Note aggiuntive del cliente: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Tipo di riunione:
+          {{meetingType}}
+          <br />
+          {{#if conferenceLink}}
+            Link per la riunione:
+            <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+          {{/if}}
+          {{#if zoomStartUrl}}
+            Link per avviare la riunione:
+            <a href="{{zoomStartUrl}}">{{zoomStartUrl}}</a><br />
+            Link per partecipare alla riunione:
+            <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Password Zoom:
+            {{zoomPassword}}
+          {{/if}}
+        </p>
+
+        <br />
+        <p>Non dimenticate di controllare il calendario.</p>
+        <p>Dopo la riunione, assicurati di contrassegnare la riunione come
+          Completa.
+          <br />È possibile visualizzare/gestire la riunione qui:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if isEscrow}}
+          <p>Una volta contrassegnata la riunione come completa, il pagamento
+            verrà emesso dopo la conferma del completamento da parte del cliente
+            o dopo 3 giorni di mancata risposta da parte del cliente.</p>
+        {{/if}}
+
+        <p>
+          Cordiali saluti,<br />
+          Il Team 30mins
+        </p>
+      </div>
+    {{else}}
+      {{! english }}
+
+      <div>
+        <p>Hello {{providerName}},</p>
+        <p>{{clientName}} has booked a {{meetingType}} meeting with you</p>
+        <p>
+          Client's Name:
+          {{clientName}}
+          <br />
+          Client's Email:
+          {{clientEmail}}
+          <br />
+          Client's Phone:
+          {{clientPhone}}
+          {{#if ccList}}
+            <br />
+            CC Recipients:
+            {{ccList}}
+          {{/if}}
+        </p>
+        <p>
+          Meeting Subject:
+          {{subject}}
+          <br />
+          Meeting Date:
+          {{meetingDate}}
+          <br />
+          Meeting Time:
+          {{meetingTime}}
+          <br />
+          Meeting Duration:
+          {{meetingDuration}}
+          min
+        </p>
+        {{#if multipleMeetings}}
+          <p>Total Meetings: {{meetingCount}}</p>
+          <p>Recurring meetings will occurr on the same day of the week and at
+            the same time as the first meeting</p>
+        {{/if}}
+        {{#if isPaid}}
+          <p>Total Amount Paid: {{currency}}{{totalAmount}}</p>
+          {{#if charityName}}
+            <p>Charity Donation: {{donationAmount}}</p>
+            <p>Charity Name: {{charityName}}</p>
+          {{/if}}
+        {{/if}}
+        {{#if additionalNotes}}
+          <p>Additional Notes from Client: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Meeting Type:
+          {{meetingType}}
+          <br />
+          {{#if conferenceLink}}
+            Link to Meeting:
+            <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+          {{/if}}
+          {{#if zoomStartUrl}}
+            Link to Start Meeting:
+            <a href="{{zoomStartUrl}}">{{zoomStartUrl}}</a><br />
+            Link to Join Meeting:
+            <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Zoom Password:
+            {{zoomPassword}}
+          {{/if}}
+        </p>
+
+        <br />
+        <p>Don't forget to check your calendar.</p>
+        <p>After your meeting, be sure to mark the Meeting as Complete
+          <br />You can view/manage your meeting here:
+          <a
+            href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+          >https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+        {{#if isEscrow}}
+          <p>Once you have marked the meeting as complete, payment will be
+            released after Client confirms completion, or 3-days of no response
+            from Client.</p>
+        {{/if}}
+
+        <p>
+          Best Regards,<br />
+          30mins Team
+        </p>
+      </div>
+
+    {{/if}}
+
+  </body>
+</html>

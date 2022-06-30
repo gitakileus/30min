@@ -1,0 +1,19 @@
+   {{#if ro}}
+      {{! romanian }}
+           {{paymentType}} – Eliberarea plății     
+    {{else if de}}
+      {{! German }}
+           {{paymentType}} - Zahlung freigeben     
+    {{else if po}}
+      {{! portuguese }}
+           {{paymentType}} - Autorizar Pagamento     
+    {{else if es}}
+      {{! esponal }}
+           {{paymentType}} – Liberación del pago     
+    {{else if it}}
+      {{! italian }}
+           {{paymentType}} -Autorizzazione pagamento     
+    {{else}}
+      {{! english }}
+           {{paymentType}} - Release Payment     
+    {{/if}}

@@ -1,0 +1,495 @@
+<html>
+  <head>
+   <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+
+      <div>
+        <p>Salut {{name}},</p>
+        <p>
+          Mulțumim pentru că te-ai alăturat la 30mins.com.
+          <br />
+          Profilul tău personal este:
+          <a
+            href="https://30mins.com/{{username}}"
+          >https://30mins.com/{{username}}</a>
+        </p>
+        <p>
+          Dacă dorești să îți schimbi adresa URL a profilului, nu ezita să îți
+          conectezi la contul tău și să îți editezi
+          <br />
+          profilul. Dacă nu ați atașat o imagine, poate doriți să adăugați una.
+          Puteți adăuga mai multe informații, cum ar fi
+          <br />
+          învățământul,locurile de muncă precedente,de asemenea publicațiile în
+          profil.
+        </p>
+        <p>
+          {{#if calendarLinked}}
+            Puteți partaja următorul link altor persoane, astfel încât aceștia
+            să poată rezerva întâlniri cu dvs.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Call"
+            >https://30mins.com/{{username}}/Call</a>
+            <br />
+            <br />
+            De obicei, oamenii adaugă acest link în semnătura lor de e-mail.
+            Poate doriți să faceți același lucru.
+            <br />
+            <br />
+            De asemenea, vă puteți împărtăși disponibilitatea cu alții, astfel
+            încât aceștia să vă vadă intervalele de timp deschise.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Availability"
+            >https://30mins.com/{{username}}/Availability</a>
+            <br />
+            <br />
+            Folosind link-urile de mai sus, ei văd când sunteți ocupat sau nu
+            și, prin urmare, aleg o oră potrivită pentru ei.
+            <br />
+            Seriozitate referitor la disponibilitatea ta.
+            <br />
+            <br />
+            Și, acesta este doar un link, puteți crea multe alte link-uri de
+            servicii ca acesta. Puteți crea servicii plătite
+            <br />
+            unde persoana care efectuează rezervări i se percepe o taxă de
+            rezervare. Plata poate fi directă către dvs. sau
+            <br />
+            puteți plăti prin ESCROW prin noi. De asemenea, puteți crea
+            întâlniri recurente, permițând rezervatorilor
+            <br />
+            să rezerveze opțional întâlniri săptămânale recurente cu dvs. Vă
+            rugăm, apăsați aici pentru mai multe detalii
+            <a href="https://30mins.com/faq">https://30mins.com/faq</a>
+
+          {{else}}
+            Nu ți-ai atașat calendarul - dacă atașezi atunci vei primi link-ul
+            tău personalizat
+            <br />
+            pe care le poți împărtăși cu alții astfel ca ei să poată rezerva
+            întâlniri cu tine.
+          {{/if}}
+        </p>
+        <p>
+          Sper să vă bucurați de experiența dvs cu 30mins.com.
+          <br />
+          <br />
+          Toate cele bune,
+          <br />
+          Echipa 30mins.com
+        </p>
+
+      </div>
+
+    {{else if de}}
+      {{! German }}
+      <div>
+        <p>Hallo {{Name}},</p>
+        <p>
+          Danke, dass Sie bei 30mins.com mitmachen.
+          <br />
+          Ihr persönliches Profil ist:
+          <a
+            href="https://30mins.com/{{username}}"
+          >https://30mins.com/{{username}}</a>
+        </p>
+        <p>
+          Wenn Sie Ihre Profilurl ändern möchten, loggen Sie sich bitte in Ihr
+          Konto ein und bearbeiten Sie Ihr
+          <br />
+          Profil. Wenn Sie kein Bild angehängt haben, sollten Sie dies
+          nachholen. Sie können in Ihrem Profil auch weitere Informationen wie
+          Ihre
+          <br />
+          Ausbildung, Ihren beruflichen Werdegang und Ihre Veröffentlichungen
+          angeben.
+        </p>
+        <p>
+          {{#if calendarLinked}}
+            Sie können den folgenden Link an andere weitergeben, damit diese
+            Termine bei Ihnen buchen können.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Call"
+            >https://30mins.com/{{username}}/Call</a>
+            <br />
+            <br />
+            Normalerweise fügen die Leute diesen Link in ihre E-Mail-Signatur
+            ein. Vielleicht möchten Sie dasselbe tun.
+            <br />
+            <br />
+            Sie können auch Ihre Verfügbarkeit mit anderen teilen, damit diese
+            Ihre freien Zeitfenster sehen können.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Availability"
+            >https://30mins.com/{{username}}/Availability</a>
+            <br />
+            <br />
+            Anhand der obigen Links sehen sie, wann Sie beschäftigt sind und
+            wann nicht, und können so eine Zeit wählen, die ihnen passt.
+            <br />
+            Kein Hin und Her mit Ihnen wegen der Verfügbarkeit.
+            <br />
+            <br />
+            Und das ist nur ein einziger Link, Sie können viele weitere
+            Service-Links wie diesen erstellen. Sie können bezahlte
+            <br />
+            Dienstleistungen, für die dem Buchenden eine Buchungsgebühr
+            berechnet wird. Die Zahlung kann direkt an Sie erfolgen oder
+            <br />
+            Sie können über ESCROW durch uns anbieten. Sie können auch
+            wiederkehrende Besprechungen erstellen, so dass
+            <br />
+            Bucher optional wöchentlich wiederkehrende Besprechungen mit Ihnen
+            buchen können. Bitte klicken Sie hier für weitere Informationen
+            <a href="https://30mins.com/faq">https://30mins.com/faq</a>
+
+          {{else}}
+            Sie haben Ihren Kalender nicht angehängt - wenn Sie ihn anhängen,
+            erhalten Sie Ihren persönlichen Link
+            <br />, den Sie mit anderen teilen können, damit sie Termine mit
+            Ihnen buchen können.
+          {{/if}}
+        </p>
+        <p>
+          Ich hoffe, Sie genießen Ihre Erfahrungen mit 30mins.com.
+          <br />
+          <br />
+          Mit freundlichen Grüßen,
+          <br />
+          30mins.com Team
+        </p>
+
+      </div>
+    {{else if po}}
+      {{! portuguese }}
+
+      <div>
+        <p>Olá {{name}},</p>
+        <p>
+          Obrigado por se juntar ao 30mins.com.
+          <br />
+          Seu perfil pessoal é:
+          <a
+            href="https://30mins.com/{{username}}"
+          >https://30mins.com/{{username}}</a>
+        </p>
+        <p>
+          Se você quiser alterar o URL do seu perfil, sinta-se à vontade para
+          fazer login na sua conta e editar o seu
+          <br />
+          perfil. Se você não anexou uma imagem, você pode adicionar uma. Você
+          pode adicionar mais informações, como
+          <br />
+          estudos, histórico de trabalho, publicações no perfil também.
+        </p>
+        <p>
+          {{#if calendarLinked}}
+            Você pode compartilhar o link a seguir com outras pessoas para que
+            elas possam agendar reuniões com você.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Call"
+            >https://30mins.com/{{username}}/Call</a>
+            <br />
+            <br />
+            Normalmente, as pessoas adicionam esse link em sua assinatura de
+            e-mail. Você pode fazer o mesmo.
+            <br />
+            <br />
+            Você também pode compartilhar sua disponibilidade com outras pessoas
+            para que elas vejam seus horários abertos.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Availability"
+            >https://30mins.com/{{username}}/Availability</a>
+            <br />
+            <br />
+            Usando os links acima, eles podem ver quando você está ocupado ou
+            não e, portanto, escolhem um horário que funcione para eles.
+            <br />
+            Sem oscilação de disponibilidade.
+            <br />
+            <br />
+            E, estes são apenas alguns dos links, você pode criar muitos outros
+            links de serviços como este. Você pode criar
+            <br />
+            serviços a pagamento onde é cobrada uma taxa de reserva ao cliente.
+            O pagamento pode ser direto para você ou
+            <br />
+            você pode oferecer via ESCROW através de nós. Você também pode criar
+            reuniões recorrentes, permitindo à quem agenda
+            <br />
+            a opção de reservar reuniões recorrentes semanais com você. Por
+            favor, clique aqui para mais informações
+            <a href="https://30mins.com/faq">https://30mins.com/faq</a>
+
+          {{else}}
+            Você não anexou seu calendário - se você anexar, receberá seu link
+            personalizado
+            <br />
+            que você pode compartilhar com os outros, assim eles podem agendar
+            reuniões com você, segundo sua disponibilidade.
+          {{/if}}
+        </p>
+        <p>
+          Esperamos que você aproveite sua experiência com 30mins.com.
+          <br />
+          <br />
+          Atenciosamente,
+          <br />
+          Equipe 30mins.com
+        </p>
+
+      </div>
+
+    {{else if es}}
+      {{! esponal }}
+
+      <div>
+        <p>Hola {{name}},</p>
+        <p>
+          Gracias por unirte a 30mins.com.
+          <br />
+          Tu página web es:
+          <a
+            href="https://30mins.com/{{username}}"
+          >https://30mins.com/{{username}}</a>
+        </p>
+        <p>
+          Si quieres cambiar la url de tu página, no dudes en acceder a tu
+          cuenta y editar tu página
+          <br />. Si todavía no has añadido una imagen, puedes añadir una.
+          También puedes añadir otras informaciones como tu
+          <br />educación, historial laboral y publicaciones.
+        </p>
+        <p>
+          {{#if calendarLinked}}
+            Puedes compartir el siguiente enlace con otras personas para que
+            puedan programar reuniones contigo.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Call"
+            >https://30mins.com/{{username}}/Call</a>
+            <br />
+            <br />
+            Normalmente, la gente añade este enlace en su firma de correo
+            electrónico. Quizá quieras hacer lo mismo.
+            <br />
+            <br />
+            También puedes compartir tu disponibilidad con otros para que puedan
+            ver tus franjas horarias libres.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Availability"
+            >https://30mins.com/{{username}}/Availability</a>
+            <br />
+            <br />
+            Utilizando los enlaces anteriores, ellos ven cuándo estás ocupado y
+            cuándo no y, por tanto, eligen un horario que les convenga.
+            <br />
+            No hay que esperar a que haya disponibilidad.
+            <br />
+            <br />
+            Y, no sólo este enlace, puedes crear muchos más enlaces de servicios
+            como este. Puedes crear
+            <br />servicios de pago en los que se cobre una cuota de reserva a
+            la persona que realiza la reserva. El pago puede ser directo a ti o
+            <br />puedes ofrecerlo vía ESCROW a través de nosotros. También
+            puedes crear reuniones recurrentes, ofreciendo a los clientes la
+            <br />posibilidad de programar reuniones semanales recurrentes
+            contigo. Haz clic aquí para obtener más informaciones.<a
+              href="https://30mins.com/faq"
+            >https://30mins.com/faq</a>
+
+          {{else}}
+            No has añadido tu calendario - si lo añades obtendrás tu enlace
+            personalizado
+            <br />que podrás compartir con otros para que puedan programar
+            reuniones contigo.
+          {{/if}}
+        </p>
+        <p>
+          Esperamos que disfrutes de tu experiencia con 30mins.com.
+          <br />
+          <br />
+          Saludos cordiales,
+          <br />
+          El equipo de 30mins.com
+        </p>
+
+      </div>
+    {{else if it}}
+      {{! italian }}
+
+      <div>
+        <p>Salve {{name}},</p>
+        <p>
+          Grazie per esserti unito a 30mins.com.
+          <br />
+          Il tuo profilo personale è:
+          <a
+            href="https://30mins.com/{{username}}"
+          >https://30mins.com/{{username}}</a>
+        </p>
+        <p>
+          Se desideri modificare l'url del tuo profilo, accedi al tuo account e
+          modifica il tuo profilo.
+          <br />
+          profile. Se non hai allegato un'immagine, puoi aggiungerne una. Nel
+          profilo puoi anche aggiungere altre informazioni come la tua
+          <br />
+          istruzione, la storia lavorativa,
+
+        </p>
+        <p>
+          {{#if calendarLinked}}
+            Puoi condividere il seguente link con altre persone, in modo che
+            possano prenotare le riunioni con te.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Call"
+            >https://30mins.com/{{username}}/Call</a>
+            <br />
+            <br />
+            Generalmente, le persone aggiungono questo link nella firma delle
+            loro e-mail. Consigliamo di fare lo stesso.
+            <br />
+            <br />
+            Puoi anche condividere la tua disponibilità con altri utenti, in
+            modo che possano vedere le tue fasce orarie disponibili.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Availability"
+            >https://30mins.com/{{username}}/Availability</a>
+            <br />
+            <br />
+            Utilizzando i link di cui sopra, possono vedere quando sei occupato
+            o meno e quindi scegliere un orario compatibile con le loro
+            esigenze.
+            <br />
+            Nessun botta e risposta per sapere la tua disponibilità.
+            <br />
+            <br />
+            E questo è solo un link, potete creare molti altri link di servizio
+            come questo. Si possono creare link a pagamento
+            <br />
+            in cui al prenotante viene addebitato un costo di prenotazione. Il
+            pagamento può essere effettuato direttamente a te o
+            <br />
+            tramite ESCROW attraverso di noi. È inoltre possibile creare
+            incontri ricorrenti, consentendo ai prenotanti di
+            <br />
+            prenotare incontri settimanali ricorrenti con te. Per maggiori
+            informazioni, clicca qui
+            <a href="https://30mins.com/faq">https://30mins.com/faq</a>
+
+          {{else}}
+            Non hai allegato il tuo calendario - se lo alleghi, otterrai il tuo
+            link personalizzato
+            <br />che potrai condividere con gli altri in modo che possano
+            prenotare le riunioni con te.
+          {{/if}}
+        </p>
+        <p>
+          Speriamo che apprezzerete la vostra esperienza su 30mins.com.
+          <br />
+          <br />
+          Cordiali saluti,
+          <br />
+          Il Team 30mins.com
+        </p>
+
+      </div>
+    {{else}}
+      {{! english }}
+
+      <div>
+        <p>Hello {{name}},</p>
+        <p>
+          Thanks for joining 30mins.com.
+          <br />
+          Your personal profile is:
+          <a
+            href="https://30mins.com/{{username}}"
+          >https://30mins.com/{{username}}</a>
+        </p>
+        <p>
+          If you would like to change your profile url, please feel free to
+          login into your account and edit your
+          <br />
+          profile. If you have not attached an image, you may want to add one.
+          You can add more information such as your
+          <br />
+          education, job history, publications in profile also.
+        </p>
+        <p>
+          {{#if calendarLinked}}
+            You can share the following link with others so that they can book
+            meetings with you.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Call"
+            >https://30mins.com/{{username}}/Call</a>
+            <br />
+            <br />
+            Typically, people add this link in their email signature. You may
+            want to do the same.
+            <br />
+            <br />
+            You can also share your availability with others so they may view
+            your open time-slots.
+            <br />
+            <a
+              href="https://30mins.com/{{username}}/Availability"
+            >https://30mins.com/{{username}}/Availability</a>
+            <br />
+            <br />
+            Using the links above, they see when you are busy or not, and hence,
+            pick a time that works for them.
+            <br />
+            No back and forth with you for availability.
+            <br />
+            <br />
+            And, this is just one link, you can create many more service links
+            like this. You can create paid
+            <br />
+            services where the booker is charged a booking fee. The payment can
+            be direct to you or
+            <br />
+            you can offer via ESCROW thru us. You can also create recurring
+            meetings, allowing bookers to
+            <br />
+            optionally book weekly recurring meetings with you. Please click
+            here for more info
+            <a href="https://30mins.com/faq">https://30mins.com/faq</a>
+
+          {{else}}
+            You have not attached your calendar - if you attach then you will
+            get your personalized link
+            <br />
+            that you can share with others so that they can book meetings with
+            you.
+          {{/if}}
+        </p>
+        <p>
+          Hope you enjoy your experience with 30mins.com.
+          <br />
+          <br />
+          Best Regards,
+          <br />
+          30mins.com Team
+        </p>
+
+      </div>
+    {{/if}}
+
+  </body>
+</html>

@@ -1,0 +1,13 @@
+
+  <html>
+    <head>
+      <title>Charity Donation Required - {{bookingId}}</title>
+    </head>
+    <body>
+     <p>Link to Meeting Details: <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a></p>
+     
+     <p>Provider Name: {{providerName}}</p>
+     <p>Donation Amount: {{currency}}{{donationAmount}}</p>
+     <p>Charity: {{charity}}</p>
+    </body>
+  </html>

@@ -1,0 +1,19 @@
+ {{#if ro}}
+      {{! romanian }}
+      30mins – Urmează o întâlnire cu {{clientName}}     
+    {{else if de}}
+      {{! German }}
+      30 Minuten - Nachbereitung des Treffens mit {{Kundenname}}     
+    {{else if po}}
+      {{! portuguese }}
+      30mins - Acompanhamento da reunião com {{clientName}}     
+    {{else if es}}
+      {{! esponal }}
+      30mins - Seguimiento de la reunión con {{clientName}}     
+    {{else if it}}
+      {{! italian }}
+      30mins - Follow-up della riunione con {{clientName}}     
+    {{else}}
+      {{! english }}
+      30mins - Follow-up on meeting with {{clientName}}     
+    {{/if}}

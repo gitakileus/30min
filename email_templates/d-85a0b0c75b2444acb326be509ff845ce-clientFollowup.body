@@ -1,0 +1,100 @@
+<html>
+  <head>
+   <title>{{subject}}</title>
+  </head>
+  <body>
+    {{#if ro}}
+      {{! romanian }}
+
+      <p>Salut {{clientName}},</p>
+      <p>Sper că ai rămas plăcut surprins de întâlnire.</p>
+
+      <p>Te rog,ai câteva secunde să dai click pe
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >satisfăcut</a>
+        sau
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >nesatisfăcut</a></p>
+      <p>Toate cele bune, <br /> {{providerName}}</p>
+    {{else if de}}
+      {{! German }}
+      <p>Hallo {{clientName}},</p>
+      <p>Ich hoffe, Sie waren mit dem Treffen zufrieden.</p>
+
+      <p>Bitte nehmen Sie sich einen Moment Zeit und klicken Sie auf
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >Zufrieden</a>
+        oder
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">Nicht
+          zufrieden</a></p>
+      <p>Mit freundlichen Grüßen, <br /> {{Anbietername}}</p>
+    {{else if po}}
+      {{! portuguese }}
+
+      <p>Olá {{clientName}},</p>
+      <p>Espero que você tenha ficado satisfeito com a reunião.</p>
+
+      <p>Por favor, reserve um momento para avaliar
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >satisfeito
+        </a>
+        or
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">
+          insatisfeito</a></p>
+      <p>Atenciosamente, <br /> {{providerName}}</p>
+    {{else if es}}
+      {{! esponal }}
+
+      <p>Hola {{clientName}},</p>
+      <p>Espero que hayas quedado satisfecho con la reunión.</p>
+
+      <p>Por favor, tómate un momento para hacer clic en
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >satisfied</a>
+        o
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">not
+          satisfied</a></p>
+      <p>Saludos cordiales, <br /> {{providerName}}</p>
+    {{else if it}}
+      {{! italian }}
+
+      <p>Salve {{clientName}},</p>
+      <p>Spero che sia rimasto soddisfatto della riunione.</p>
+
+      <p>Per favore, prenditi un momento per darci un feedback
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >soddisfatto</a>
+        or
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">non
+          soddisfatto</a></p>
+      <p>Cordiali saluti, <br /> {{providerName}}</p>
+    {{else}}
+      {{! english }}
+
+      <p>Hello {{clientName}},</p>
+      <p>I hope you were satisfied with the meeting.</p>
+
+      <p>Please take a moment to click
+        <a
+          href="https://30mins.com/user/meetingDetails/{{bookingId}}"
+        >satisfied</a>
+        or
+        <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">not
+          satisfied</a></p>
+      <p>Best Regards, <br /> {{providerName}}</p>
+    {{/if}}
+
+  </body>
+</html>
+{{! 
+
+
+
+
+ }}

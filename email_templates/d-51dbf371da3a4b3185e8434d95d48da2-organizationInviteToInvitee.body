@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>{{subject}}</title>
+  </head>
+  <body>
+
+    {{#if ro}}
+      {{! romanian }}
+	
+
+  	<p>Salut{{#if inviteeName}} {{inviteeName}}{{/if}},</p>
+  	<p>{{inviterName}} ar dori să te invite în organizația {{organizationTitle}} pe <a href="https://30mins.com">30mins.com</a></p>
+  	{{#if inviteeHasAccount}}
+  	<p> Vă rugăm să acordați câteva momente pentru a accepta/refuza invitația noastră din pagina dvs. de Invitații în Așteptare din Tabloul de Bord pentru utilizatori: <a href="https://30mins.com/user/pendingOrganizationInvites/">https://30mins.com/user/pendingOrganizationInvites/ </a> <br/> <br/>
+  	Această invitație va expira în 72 de ore.</p>
+  	{{else}}
+  	<p>Vă rugăm să acordați câteva momente <a href="{{joinLink}}">{{joinLink}}</a>. În timpul procesului de întâmpinare, vi se va solicita să acceptați/să refuzați invitația. <br/> Această invitație va expira în 72 de ore.</p>
+  	{{/if}}
+  	<p>Toate cele bune, <br/> Echipa {{organizationTitle}} </p>
+    
+    {{else if de}}
+      {{! German }}
+<p>Hallo{{#if inviteeName}} {{inviteeName}}{{/if}},</p>
+  	<p>{{Einladungsname}} möchte Sie zur Organisation {{Organisationstitel}} auf <a href="https://30mins.com">30mins.com</a></p> einladen
+  	{{#if inviteeHasAccount}}
+  	<p>Bitte nehmen Sie sich einen Moment Zeit, um unsere Einladung auf Ihrer Seite "Ausstehende Einladungen" in Ihrem Benutzer-Dashboard anzunehmen oder abzulehnen: <a href="https://30mins.com/user/pendingOrganizationInvites/">https://30mins.com/user/pendingOrganizationInvites/ </a> <br/> <br/>
+  	Diese Einladung wird in 72 Stunden ablaufen.</p>>
+  	{{else}}
+  	<p>Bitte nehmen Sie sich einen Moment Zeit und melden Sie sich unter <a href="{{joinLink}}">{{joinLink}}</a> an. Während des Willkommensprozesses werden Sie aufgefordert, die Einladung anzunehmen oder abzulehnen. <br/> Diese Einladung wird in 72 Stunden ablaufen.</p>
+  	{{/if}}
+  	<p>Mit freundlichen Grüßen, <br/> {{organizationTitle}} Team</p>
+    
+    {{else if po}}
+      {{! portuguese }}
+    
+
+  	<p>Olá{{#if inviteeName}} {{inviteeName}}{{/if}},</p>
+  	<p>{{inviterName}} gostaria de convidá-lo para a organização {{organizationTitle}} no <a href="https://30mins.com">30mins.com</a></p>
+  	{{#if inviteeHasAccount}}
+  	<p>Reserve um momento para aceitar/recusar nosso convite em sua página de convites pendentes do Painel do Usuário: <a href="https://30mins.com/user/pendingOrganizationInvites/">https://30mins.com/user/pendingOrganizationInvites/ </a> <br/> <br/>
+  	Este convite irá expirar em 72 horas.</p>
+  	{{else}}
+  	<p>Reserve um momento para se inscrever no <a href="{{joinLink}}">{{joinLink}}</a>. Durante o processo de boas-vindas, você será solicitado a aceitar/recusar o convite. <br/> Este convite irá expirar em 72 horas.</p>
+  	{{/if}}
+  	<p>Atenciosamente, <br/> {{organizationTitle}} Equipe</p>
+
+    {{else if es}}
+      {{! esponal }}
+    
+
+      <p>Hola{{#if inviteeName}} {{inviteeName}}{{/if}},</p>
+      <p>{{inviterName}}
+        desea invitarte a unirte a
+        {{organizationTitle}}
+        en
+        <a href="https://30mins.com">30mins.com</a></p>
+      {{#if inviteeHasAccount}}
+        <p>Por favor, tómate un momento para aceptar/rechazar nuestra invitación
+          en la página de invitaciones pendientes de tu panel de usuario:
+          <a
+            href="https://30mins.com/user/pendingOrganizationInvites/"
+          >https://30mins.com/user/pendingOrganizationInvites/ </a>
+          <br />
+          <br />
+          Esta invitación expirará en 72 horas.</p>
+      {{else}}
+        <p>Por favor, tómate un momento para inscribirte en
+          <a href="{{joinLink}}">{{joinLink}}</a>. Durante el proceso de
+          bienvenida, se te pedirá que aceptes o rechaces la invitación.
+          <br />
+          Esta invitación expirará en 72 horas.</p>
+      {{/if}}
+      <p>Saludos cordiales, <br /> el equipo de {{organizationTitle}} </p>
+
+    {{else if it}}
+      {{! italian }}
+       
+
+        <p>Salve{{#if inviteeName}} {{inviteeName}}{{/if}},</p>
+        <p>{{inviterName}} desidera invitarti all'organizzazione {{organizationTitle}} su <a href="https://30mins.com">30mins.com</a></p>
+        {{#if inviteeHasAccount}}
+        <p>Per favore, prenditi un momento per accettare o rifiutare il nostro invito nella tua pagina Inviti in sospeso del pannello utente.: <a href="https://30mins.com/user/pendingOrganizationInvites/">https://30mins.com/user/pendingOrganizationInvites/ </a> <br/> <br/>
+        Questo invito scadrà tra 72 ore..</p>
+        {{else}}
+        <p>Per favore, prenditi un momento per iscriverti all'indirizzo <a href="{{joinLink}}">{{joinLink}}</a>. Durante il processo di benvenuto, ti verrà chiesto di accettare o rifiutare l'invito. <br/> Questo invito scadrà tra 72 ore. </p>
+        {{/if}}
+        <p>Cordiali saluti, <br/> Il Team {{organizationTitle}}</p>
+            
+    {{else}}
+      {{! english }}
+
+      
+      <p>Hello{{#if inviteeName}} {{inviteeName}}{{/if}},</p>
+      <p>{{inviterName}}
+        would like to invite you to the organization
+        {{organizationTitle}}
+        on
+        <a href="https://30mins.com">30mins.com</a></p>
+      {{#if inviteeHasAccount}}
+        <p>Please take a moment to accept/decline our invitation within your
+          User Dashboard Pending Invitations Page:
+          <a
+            href="https://30mins.com/user/pendingOrganizationInvites/"
+          >https://30mins.com/user/pendingOrganizationInvites/ </a>
+          <br />
+          <br />
+          This Invitation will expire in 72-hours.</p>
+      {{else}}
+        <p>Please take a moment to signup at
+          <a href="{{joinLink}}">{{joinLink}}</a>. During the Welcome Process,
+          you will be prompted to accept/decline the invitation.
+          <br />
+          This invitation will expire in 72-hours.</p>
+      {{/if}}
+      <p>Best Regards, <br /> {{organizationTitle}} Team</p>
+    {{/if}}
+
+  </body>
+</html>

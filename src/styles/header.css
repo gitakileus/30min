@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .headerSm {
+    @apply text-xl;
+  }
+  .header {
+    @apply text-3xl;
+  }
+  .headerLg {
+    @apply text-4xl;
+  }
+  .headerXl {
+    @apply text-6xl;
+  }
+}

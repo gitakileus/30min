@@ -1,0 +1,36 @@
+   {{#if ro}}
+      {{! romanian }}
+           {{organizationTitle}}
+        a
+        {{requestStatus}}
+        cererea ta de alăturare     
+    {{else if de}}
+      {{! German }}
+           {{OrganisationTitel}}
+        hat
+        {{requestStatus}}
+        Ihre Beitrittsanfrage     
+    {{else if po}}
+      {{! portuguese }}
+
+           {{organizationTitle}}
+        {{requestStatus}}
+        seu Pedido de Adesão     
+
+    {{else if es}}
+      {{! esponal }}
+           {{organizationTitle}}
+        ha
+        {{requestStatus}}
+        tu solicitud de ingreso     
+    {{else if it}}
+      {{! italian }}
+           {{organizationTitle}} ha {{requestStatus}} la,tua richiesta     
+    {{else}}
+      {{! english }}
+           {{organizationTitle}}
+        has
+        {{requestStatus}}
+        your Join Request     
+
+    {{/if}}

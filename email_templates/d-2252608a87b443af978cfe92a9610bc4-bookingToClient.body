@@ -1,0 +1,302 @@
+<html>
+<head>
+    <title>{{subject}}</title>
+</head>
+
+<body>
+    {{#if ro}}
+    {{!-- romanian --}}
+    <div>
+        <p>Salut {{ ccName }},</p>
+        <p>Mulțumesc pentru rezervarea {{meetingType}} cu mine.</p>
+        <p>
+            Subiectul întâlnirii: {{subject}} <br />
+            Data întâlnirii: {{meetingDate}} <br />
+            Timpul întâlnirii: {{meetingTime}} <br />
+            Durata întâlnirii: {{meetingDuration}} min
+        </p>
+        {{#if multipleMeetings}}
+        <p>Totalul de întâlniri: {{meetingCount}}</p>
+        <p> Întâlnirile recurente vor avea loc în aceeași zi a săptămânii și la aceeași oră cu prima întâlnire </p>
+        {{/if}}
+        {{#if isPaid}}
+        <p>Suma achitată totală: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+        <p>Donație cu scop caritabil: {{donationAmount}}</p>
+        <p>Numele carității: {{charityName}}</p>
+        {{/if}}
+        {{/if}}
+        <br>
+        {{#if additionalNotes}}
+        <p>Notițe adiționale din partea clientului: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Tipul întâlnirii: {{meetingType}}
+            <br />
+            {{#if conferenceLink}}
+            Link-ul întâlnirii: <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+            {{/if}}
+            {{#if zoomJoinUrl}}
+            Link-ul conectării la întâlnire: <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Parola Zoom: {{zoomPassword}}
+            {{/if}}
+        </p>
+        <p>Nu uita să îți verifici calendarul.</p>
+        <p>Toate cele bune, <br />
+            {{providerName}}
+        </p>
+        <p>P.S: Folosesc <a href="https://30mins.com/">30mins.com</a> pentru a le permite altora să își programeze
+            întâlniri cu mine fără alte dificultăți. Poți să vezi și singur. E complet gratuit.</p>
+        {{#if isCC}}
+        {{else}}
+        <p>Poți să îți vezi și să îți gestionezi întâlnirea programată aici: <a
+                href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a> </p>
+            {{/if}}
+    </div>
+
+    {{else if de}}
+    {{!-- German --}}
+        <div>
+            <p>Hallo {{ ccName }},</p>
+            <p>Danke für die Buchung {{meetingType}} des Treffens mit mir.</p>
+            <p>
+            Thema der Sitzung: {{subject}} <br/>
+            Datum der Sitzung: {{meetingDate}} <br/>
+            Uhrzeit der Sitzung: {{meetingTime}} <br/>
+            Dauer der Sitzung: {{meetingDuration}} Min
+            </p>
+            {{#if multipleMeetings}}
+                <p>Gesamttreffen: {{meetingCount}}</p>
+                <p>Wiederkehrende Treffen finden am selben Wochentag und zur selben Zeit wie das erste Treffen statt.</p>
+            {{/if}}
+            {{#if isPaid}}
+                <p>Gezahlter Gesamtbetrag: {{currency}}{{totalAmount}}</p>
+                {{#if charityName}}
+                <p>Spende für wohltätige Zwecke: {{donationAmount}}</p>
+                <p>Name der Wohltätigkeitsorganisation: {{charityName}}</p>
+                {{/if}}
+            {{/if}}
+            <br>
+            {{#if additionalNotes}}
+                <p>Zusätzliche Anmerkungen des Kunden: {{additionalNotes}}</p>
+            {{/if}}
+            <p>Art der Sitzung: {{meetingType}}
+            <br/>
+            {{#if conferenceLink}}
+                Link zum Treffen: <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+            {{/if}}
+            {{#if zoomJoinUrl}}
+                Link zur Teilnahme am Meeting: <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br/>
+                Passwort vergrößern: {{zoomPassword}}
+            {{/if}}
+            </p>
+            <p>Vergessen Sie nicht, Ihren Kalender zu überprüfen.</p>
+            <p>Mit freundlichen Grüßen, <br/>
+            {{providerName}}
+            </p>
+            <p>P.S: Ich verwende <a href="https://30mins.com/">30mins.com</a>, um anderen die Möglichkeit zu geben, mühelos Termine mit mir zu vereinbaren. Vielleicht möchten Sie sich selbst davon überzeugen. Es ist völlig kostenlos.</p>
+            {{#if isCC}}
+            {{else}}
+            <p>Sie können Ihr gebuchtes Meeting hier einsehen und verwalten: <a href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a> </p>
+            {{/if}}
+        </div>
+    {{else if po}}
+    {{!-- portuguese --}}
+    <div>
+        <p>Olá {{ ccName }},</p>
+        <p>Obrigada por reservar {{meetingType}} uma reunião comigo.</p>
+        <p>
+            Assunto da Reunião: {{subject}} <br />
+            Data da Reunião: {{meetingDate}} <br />
+            Hora da Reunião: {{meetingTime}} <br />
+            Duração da Reunião: {{meetingDuration}} min.
+        </p>
+        {{#if multipleMeetings}}
+        <p>Total de Reuniões: {{meetingCount}}</p>
+        <p>As reuniões recorrentes acontecerão no mesmo dia da semana e no mesmo horário da primeira reunião</p>
+        {{/if}}
+        {{#if isPaid}}
+        <p>Valor Total Pago: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+        <p>Doação para Caridade: {{donationAmount}}</p>
+        <p>Nome da Instituição de Caridade: {{charityName}}</p>
+        {{/if}}
+        {{/if}}
+        <br>
+        {{#if additionalNotes}}
+        <p>Notas Adicionais do Cliente: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Tipo de Reunião: {{meetingType}}
+            <br />
+            {{#if conferenceLink}}
+            Link para a reunião: <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+            {{/if}}
+            {{#if zoomJoinUrl}}
+            Link para participar da reunião: <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Senha do Zoom: {{zoomPassword}}
+            {{/if}}
+        </p>
+        <p>Não se esqueça de conferir o seu calendário.</p>
+        <p>Atenciosamente, <br />
+            {{providerName}}
+        </p>
+        <p>P.S: Estou usando <a href="https://30mins.com/">30mins.com</a> para permitir que outras pessoas agendem
+            reuniões comigo facilmente. Você pode conferir por si mesmo. É completamente grátis.</p>
+        {{#if isCC}}
+        {{else}}
+        <p>Você pode visualizar e gerenciar sua reunião reservada aqui: <a
+                href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a> </p>
+            {{/if}}
+    </div>
+
+    {{else if es}}
+    {{!-- esponal --}}
+    <div>
+        <p>Hola {{ ccName }},</p>
+        <p>Gracias por programar una reunión {{meetingType}} conmigo.</p>
+        <p>
+            Asunto de la reunión: {{subject}} <br />
+            Fecha de la reunión: {{meetingDate}} <br />
+            Hora de la reunión: {{meetingTime}} <br />
+            Duración de la reunión: {{meetingDuration}} min
+        </p>
+        {{#if multipleMeetings}}
+        <p>Reuniones totales: {{meetingCount}}</p>
+        <p>Las reuniones periódicas tendrán lugar el mismo día de la semana y a la misma hora que la primera reunión</p>
+        {{/if}}
+        {{#if isPaid}}
+        <p>Importe total pagado: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+        <p>Donación de caridad: {{donationAmount}}</p>
+        <p>Nombre de la organización benéfica: {{charityName}}</p>
+        {{/if}}
+        {{/if}}
+        <br>
+        {{#if additionalNotes}}
+        <p>Notas adicionales del cliente: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Tipo de reunión: {{meetingType}}
+            <br />
+            {{#if conferenceLink}}
+            Enlace a la reunión: <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+            {{/if}}
+            {{#if zoomJoinUrl}}
+            Enlace para unirse a la reunión: <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Contraseña de Zoom: {{zoomPassword}}
+            {{/if}}
+        </p>
+        <p>No olvides consultar tu calendario.</p>
+        <p>Saludos cordiales, <br />
+            {{providerName}}
+        </p>
+        <p>P.D: Estoy usando <a href="https://30mins.com/">30mins.com</a> para que otros puedan programar reuniones
+            conmigo sin esfuerzo. Quizás quieras comprobarlo por ti mismo. Es completamente gratis.</p>
+        {{#if isCC}}
+        {{else}}
+        <p>Puedes ver y gestionar tu reunión programada aquí: <a
+                href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a> </p>
+            {{/if}}
+    </div>
+    {{else if it}}
+    {{!-- italian --}}
+    <div>
+        <p>Salve {{ ccName }},</p>
+        <p>Grazie per aver prenotato un appuntamento {{meetingType}} con me.</p>
+        <p>
+            Oggetto della riunione: {{subject}} <br />
+            Data della riunione: {{meetingDate}} <br />
+            Orario della riunione: {{meetingTime}} <br />
+            Durata della riunione: {{meetingDuration}} min
+        </p>
+        {{#if multipleMeetings}}
+        <p>Totale riunioni: {{meetingCount}}</p>
+        <p>Le riunioni ricorrenti si terranno nello stesso giorno della settimana e alla stessa ora della prima
+            riunione.</p>
+        {{/if}}
+        {{#if isPaid}}
+        <p>Totale pagato: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+        <p>Donazione di beneficenza: {{donationAmount}}</p>
+        <p>Ente di beneficenza: {{charityName}}</p>
+        {{/if}}
+        {{/if}}
+        <br>
+        {{#if additionalNotes}}
+        <p>Note aggiuntive del cliente: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Tipo di riunione: {{meetingType}}
+            <br />
+            {{#if conferenceLink}}
+            Link della riunione: <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+            {{/if}}
+            {{#if zoomJoinUrl}}
+            Link per accedere alla riunione: <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Password Zoom: {{zoomPassword}}
+            {{/if}}
+        </p>
+        <p>Non dimenticate di controllare il calendario.</p>
+        <p>Cordiali saluti, <br />
+            {{providerName}}
+        </p>
+        <p>P.S: Sto usando <a href="https://30mins.com/">30mins.com</a> per consentire ad altri di pianificare riunioni
+            con me in modo semplice. Potreste volerlo provare anche voi. È completamente gratuito.</p>
+        {{#if isCC}}
+        {{else}}
+        <p>È possibile visualizzare e gestire le riunioni prenotate qui: <a
+                href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a> </p>
+            {{/if}}
+    </div>
+    {{else}}
+    {{!-- english --}}
+    <div>
+        <p>Hello {{ ccName }},</p>
+        <p>Thanks for booking {{meetingType}} meeting with me.</p>
+        <p>
+            Meeting Subject: {{subject}} <br />
+            Meeting Date: {{meetingDate}} <br />
+            Meeting Time: {{meetingTime}} <br />
+            Meeting Duration: {{meetingDuration}} min
+        </p>
+        {{#if multipleMeetings}}
+        <p>Total Meetings: {{meetingCount}}</p>
+        <p>Recurring meetings will occurr on the same day of the week and at the same time as the first meeting</p>
+        {{/if}}
+        {{#if isPaid}}
+        <p>Total Amount Paid: {{currency}}{{totalAmount}}</p>
+        {{#if charityName}}
+        <p>Charity Donation: {{donationAmount}}</p>
+        <p>Charity Name: {{charityName}}</p>
+        {{/if}}
+        {{/if}}
+        <br>
+        {{#if additionalNotes}}
+        <p>Additional Notes from Client: {{additionalNotes}}</p>
+        {{/if}}
+        <p>Meeting Type: {{meetingType}}
+            <br />
+            {{#if conferenceLink}}
+            Link to Meeting: <a href="{{conferenceLink}}">{{conferenceLink}}</a>
+            {{/if}}
+            {{#if zoomJoinUrl}}
+            Link to Join Meeting: <a href="{{zoomJoinUrl}}">{{zoomJoinUrl}}</a><br />
+            Zoom Password: {{zoomPassword}}
+            {{/if}}
+        </p>
+        <p>Don't forget to check your calendar.</p>
+        <p>Best Regards, <br />
+            {{providerName}}
+        </p>
+        <p>P.S: I'm using <a href="https://30mins.com/">30mins.com</a> for enabling others to schedule meetings
+            effortlessly with me. You may want to checkout for yourself. It's completely free.</p>
+        {{#if isCC}}
+        {{else}}
+        <p>You can view and manage your booked meeting here: <a
+                href="https://30mins.com/user/meetingDetails/{{bookingId}}">https://30mins.com/user/meetingDetails/{{bookingId}}</a> </p>
+            {{/if}}
+    </div>
+
+
+    {{/if}}
+
+</body>
+
+</html>

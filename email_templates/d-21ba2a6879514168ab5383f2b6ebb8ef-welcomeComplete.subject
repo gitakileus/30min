@@ -1,0 +1,19 @@
+ {{#if ro}}
+      {{! romanian }}
+        Bun venit la 30mins {{name}}!   
+    {{else if de}}
+      {{! German }}
+        Willkommen bei 30mins {{Name}}!   
+    {{else if po}}
+      {{! portuguese }}
+        Bem-vindo ao 30mins {{name}}!   
+    {{else if es}}
+      {{! esponal }}
+        Bienvenido a 30mins {{name}}!   
+    {{else if it}}
+      {{! italian }}
+        Benvenuto su 30mins {{name}}!   
+    {{else}}
+      {{! english }}
+        Welcome to 30mins {{name}}!   
+    {{/if}}
